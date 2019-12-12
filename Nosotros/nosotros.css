@@ -1,0 +1,19 @@
+* {font-family:Verdana;}
+h1 {text-align:center;}
+h3 {text-align:center;}
+hr {border: 0; height: 12px; box-shadow: inset 0 12px 12px -12px blue;}
+div h2 {text-align:center;}
+#content {clear:both; padding: 0px 40px 10px 100px;}
+#caja1 {float:left;}
+
+#caja2 {float:left; border:2px solid blue; width:30%; }
+	#caja2 p {margin-left:10px;}
+	#caja2 img {border-radius:150px; width:15%; height:100px; float:right; margin-right:45%;}
+
+#caja3 {float:left; margin-left:70px; border:2px solid blue; width:30%;}
+	#caja3 p {margin-left:10px;}
+	#caja3 img {border-radius:150px; width:15%; height:100px; float:right; margin-right:42%;}
+
+#caja4 {float:right; border:2px solid blue; width:30%; margin-right:10px;}
+	#caja4 p {margin-left:10px;}
+	#caja4 img {border-radius:150px; width:15%; height:100px; float:right; margin-right:42%;}
