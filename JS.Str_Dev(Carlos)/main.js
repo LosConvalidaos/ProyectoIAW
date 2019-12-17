@@ -1,7 +1,7 @@
 /* Carlos Labiano Cerón */
 /*        2ºASIR        */
 //Porcentaje de beneficio
-var benefitTX = 0.30;
+//var benefitTX = 0.30;
 class ShopItem {
     constructor (Nombre = 'Placeholder',Precio = 0,Stock = 0,Valoracion = 0,Imagen = 'Placeholder.jpg',Descripcion = 'Placeholder', Tipo = null) {
         this.name = Nombre;
@@ -11,8 +11,25 @@ class ShopItem {
         this.img = Imagen;
         this.descr = Descripcion;
         this.type = Tipo;
+        /* [Tabla de correlacion Array - Tipo prod]
+                        0 - PCs
+                    1 - Componentes
+                    2 - Perifericos
+                    3 - Merchandising
+                    4 - Discos duros
+                        5 - Gaming
+                    null - Otros
+        */
     }
     /* Getters + Setters */
+    get typestr() {
+        var prodtypes = ['PCs','Componentes','Perifericos','Merchandising','Discos duros','Gaming'];
+        if (this.type == null) {
+            return 'Otros';
+        } else {
+            return prodtypes[this.type]
+        }
+    }
     /* Metodos */
     //Devuelve el porcentaje de beneficio correspondiente segun el tipo de producto
     CalcBenefit(t) {
@@ -58,8 +75,7 @@ function pruebas() {
 
 /* IDEAS */
 /*
-    -> Calcular el benefitTX segun el tipo de producto
-    [Tabla de correlacion Array - Tipo]
+    [Tabla de correlacion Array - Tipo prod]
         0 - PCs
         1 - Componentes
         2 - Perifericos
@@ -67,5 +83,4 @@ function pruebas() {
         4 - Discos duros
         5 - Gaming
         null - Otros
-    -> Generar dinamicamente la cantidad de productos (Bucle for)
 */
