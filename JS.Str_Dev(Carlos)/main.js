@@ -3,19 +3,29 @@
 //Porcentaje de beneficio
 var benefitTX = 0.30;
 class ShopItem {
-    constructor (Nombre = 'Placeholder',Precio = 0,Stock = 0,Valoracion = 0,Imagen = 'Placeholder.jpg',Descripcion = 'Placeholder') {
+    constructor (Nombre = 'Placeholder',Precio = 0,Stock = 0,Valoracion = 0,Imagen = 'Placeholder.jpg',Descripcion = 'Placeholder', Tipo = null) {
         this.name = Nombre;
         this.cost = Precio;
         this.qty = Stock;
         this.rating = Valoracion;
         this.img = Imagen;
         this.descr = Descripcion;
+        this.type = Tipo;
     }
     /* Getters + Setters */
     /* Metodos */
+    //Devuelve el porcentaje de beneficio correspondiente segun el tipo de producto
+    CalcBenefit(t) {
+        var prodtypes = [0.1,0.5,0.3,0.25,0.75];
+        if (t == null) {
+            return 0.2;
+        } else {
+            return prodtypes[t];
+        }
+    }
     //Devuelve el precio con IVA mas el porcentaje de beneficio
     CalcSell() {
-        return this.cost + (this.cost*0.21)+(this.cost*benefitTX);
+        return this.cost + (this.cost*0.21)+(this.cost*this.CalcBenefit(this.type));
     }
     //Metodo que muestra de forma mas visual la valoracion
     //WIP
@@ -35,9 +45,11 @@ function init() {
 
 /* Funciones */
 function pruebas() {
-    var test = new ShopItem('NombrePRB',0,0,0,'IMG','Prueba');
+    var test = new ShopItem('NombrePRB',0,0,0,'Placeholder.jpg','Prueba');
     alert(test.img);
-    alert(prod5.img)
+    alert(prod5.CalcSell())
+
+    document.getElementById('test').src = test.img;
     /*  Pruebas de acceso a ficheros, no funciona con formato file://
         por tanto seria necesario un servidor web o similar */
     //var response = fetch('../README.md');
@@ -47,5 +59,13 @@ function pruebas() {
 /* IDEAS */
 /*
     -> Calcular el benefitTX segun el tipo de producto
+    [Tabla de correlacion Array - Tipo]
+        0 - PCs
+        1 - Componentes
+        2 - Perifericos
+        3 - Merchandising
+        4 - Discos duros
+        5 - Gaming
+        null - Otros
     -> Generar dinamicamente la cantidad de productos (Bucle for)
 */
