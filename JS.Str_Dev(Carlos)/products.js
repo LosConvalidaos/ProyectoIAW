@@ -85,4 +85,24 @@ function init() {
     prod17 = new ShopItem('Gigabyte B450 AORUS M',83.99,159,4.5,'prod17.jpg','AMD presenta los últimos procesadores de la serie Ryzen ™ 2000 para proporcionar la potencia de cómputo necesaria para los juegos. Las placas base de la serie 400 de GIGABYTE se ajustan perfectamente al rendimiento informático de los procesadores de la serie AMD Ryzen ™ 2000 con más funciones y más control. Los usuarios pueden disfrutar los beneficios traídos por los procesadores de la serie AMD Ryzen ™ 2000.',1);
     prod18 = new ShopItem('Asus Rog Strix Z390-F Gaming',229.90,71,5,'prod18.jpg','Te presentamos la placa base Rog Strix Z390-F Gaming con socket 1151 de octava generación y Chipset Z390 de Asus.',1);
     prod19 = new ShopItem('Tempest Gaming GPSU Fuente de Alimentación 750W',37.18,121,4,'prod19.jpg','Te presentamos la Fuente de Alimentación Tempest Gaming GPSU 750W.',1);
+    //PERIFERICOS 2
+    prod21 = new ShopItem('HP OMEN X Emperium 64.5" LED UltraHD 4K HDR 144Hz G-Sync',1652.07,6,4.5,'prod21.jpg','Que no te pille desprevenido, porque ni el juego ni el entretenimiento en casa volverán a ser lo mismo. Este vanguardista monitor da vida a toda la sala de estar gracias a las sorprendentes imágenes 4K HDR, a NVIDIA® G-SYNC® Ultimate con frecuencias de actualización ultrarrápidas de hasta 144 Hz y a la integración de NVIDIA® SHIELD™. Juega, visualiza ocio en streaming y sumérgete en una brillante pantalla de 64,5" (163,8 cm): cuando se trata de inmersión, nada puede ser mejor, o más grande, que esto.',2);
+    prod22 = new ShopItem('Philips 273V7QDAB 27" LED IPS FullHD',123.96,28,4,'prod22.jpg','Una amplia pantalla con imágenes impresionantes que se extienden de borde a borde sin dañar la vista con un diseño fino y compacto.',2);
+    prod23 = new ShopItem('Tempest Apocalypse Combo Gaming Teclado + Ratón + Auriculares + Alfombrilla',33.05,61,4.25,'prod23.jpg','Tempest, una de la marcas más punteras y con mejor calidad precio del mercado una vez más lo vuelve a hacer, el pack perfecto para todos aquellos que quieran iniciarse en el gaming, dar a su pc un look más gamer o mejorar parte de los elementos de los que ya disponen. Para ello han seleccionado 4 productos de excelente calidad con los cuales dotar a tu pc de luz, color y una experiencia de juego a la vanguardia de gaming actual.  No lo pienses más, tus partidas no volverán a ser iguales.',2);
+    prod24 = new ShopItem('Razer Epic Gaming Pack Kraken X Lite + Cynosa Chroma + Deathadder Essential + Goliathus MSE',90.89,32,4.5,'prod24.jpg','Gana a todos tus rivales con este magnífico pack gaming de Razer. Un combo espectacular compuesto por el teclado Cynosa Chroma, los auriculares Kraken X Lite, el ratón Deathadder Essential y la alfombrilla Goliathus Mobile Stealth Edition. ¿Quieres ganar a tus enemigos? Serás el más rápido juegues a lo que juegues.',2);
+    prod25 = new ShopItem('Logitech G502 Special Edition Ratón Gaming 16000DPI',35.53,64,5,'prod25.jpg','Tu ratón para gaming de alto rendimiento favorito ofrece más funciones y precisión que nunca. Personaliza la iluminación RGB para que coincida con tu estilo y entorno o sincronízala con otros productos Logitech G. El ratón para gaming de alto rendimiento G502 incluye nuestro sensor óptico HERO 16K de próxima generación para máxima precisión y seguimiento superior.',2);
+    prod26 = new ShopItem('Logitech Wireless Mouse M185 Gris',8.26,735,4.5,'prod26.jpg','Sencillo y fiable ratón inalámbrico de fácil conexión. Conexión inalámbrica fiable. Sin retrasos ni interrupciones. El minúsculo receptor inalámbrico proporciona una conexión de confianza.',2);
+    prod27 = new ShopItem('Thrustmaster T300RS GT Edition Volante PC/PS4/PS3',274.38,134,4.5,'prod27.jpg','Te presentamos el Volante T300RS GT Edition para PC/PS4/PS3 de Thrustmaster',2);
+    prod28 = new ShopItem('Thrustmaster T.16000M FCS Joystick',41.31,44,4,'prod28.jpg','La Palanca de vuelo T.16000M FCS cuenta con la Precisión exclusiva: H.E.A.R.T* HallEffect AccuRate Technology™, sensores magnéticos 3D (Hall Effect) situados en la palanca, niveles de precisión 256 veces mayores que los sistemas actuales (¡resolución de 16 bits: 16.000 x 16.000 valores!).',2);
+    prod29 = new ShopItem('Noblechairs Epic Nappa Black Silla Gaming Negra',825.62,1,1,'prod29.jpg','Silla gaming transpirable de noblechairs en negro con costuras negras, ruedas de 60 mm, reposabrazos 4D, totalmente tapizada y cubierta en cuero Nappa.',2);
+    //MERCHANDISING 3
+    prod31 = new ShopItem('Vegeta (Metallic)',32.00,43,5,'prod31.jpg','Dragonball Z Pop!',3);
+    prod32 = new ShopItem('Boba Fett (Droids)',680,3,5,'prod32.jpg','Boba Fett - Star Wars Pop!',3);
+    
+
+    //DISCOS DUROS 4
+    prod41 = new ShopItem
+    //GAMING 5
+    prod51 = new ShopItem
+    //ADICIONALES
 }
