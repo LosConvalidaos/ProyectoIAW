@@ -1,0 +1,18 @@
+MEMORIA Proyecto EIE-IAW ASIR2
+..........................................................
+09-12-2019: Se piensa el nombre de empresa. Anteriores nombres de empresas --> 
+CJM (Proyecto 2º SMR Cristian) SJI (Proyecto 2º SMR Bibu) SECTION ZEX(Proyecto 2º SMR Carlos)
+Se ha pensado en los siguientes nombres: CCB, BCC, CBC, Custom, Irauto, Bibu devices, B&C&C Devices.
+
+10-12-2019: Se escoge el nombre final para la empresa.El nombre final será B&C&C Devices. Se piensa el planteamiento del sitio web.
+11-12-2019: Comienza el trabajo, ya pensado el planteamiento. Se empieza a diseñar la página principal que se llama "index.html"
+12-12-2019: Se sigue con el diseño de la página principal, se encarga bibu de ello. La página de nosotros se encarga cris.
+16-12-2019: Continuamos con el diseño de la página principal, y se continua con la página nosotros. Carlos empieza con la página productos.
+17-12-2019:Se continua con el desarrollo de JavaScript de la página nosotros. Carlos sigue con el diseño de la página productos. Y Bibu con slider de la página principal.
+18-12-2019: Carlos continua desarrollando la página de productos, Bibu continua con la sección de la página principal haciendola más funcional. Cris continua con la página nosotros
+creando un texto descriptivo para cada trabajador.
+19-12-2019: Cris termina con el texto de los trabajadores, Bibu sigue haciendo funcional la página principal y Carlos continua con el desarrollo haciendolo más funcional.
+8-1-2020:
+9-1-2020:
+
+
