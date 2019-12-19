@@ -98,10 +98,27 @@ function init() {
     //MERCHANDISING 3
     prod31 = new ShopItem('Vegeta (Metallic)',32.00,43,5,'prod31.jpg','Dragonball Z Pop!',3);
     prod32 = new ShopItem('Boba Fett (Droids)',680,3,5,'prod32.jpg','Boba Fett - Star Wars Pop!',3);
-    
-
+    //TO DO
+    prod33 = new ShopItem(); //Anime 
+    prod34 = new ShopItem();
+    //TO DO
+    prod35 = new ShopItem('Katana Larga Bankai Ichigo (Bleach)',43.56,23,2.5,'prod35.jpg','Katana Bankai de Ichigo de la famosa serie manga y anime Bleach. Hoja fabricada en acero al carbono con una capa de pintura negra. Incluye vaina de color neegro.',3);
+    prod36 = new ShopItem('The Anduril Sword',877.50,36,5,'prod36.jpg','The Lord of the Rings Anduril sword is a recreation from the popular trilogy written by J.R,.R. Tolkien. The Anduril is hand Crafted with 5160 High Carbon steel, dual hardened to a Rockwell of 60 at the edge and 48-50 at the core. The beautifully detailed leather handle is accentuated by the unique pommel, making this one of the most recognized fantasy swords. The blade is forged with a deep full length fuller.',3);
+    prod37 = new ShopItem('FIGURA ACCIÓN FORTNITE: NITEHARE 18 CM',29.95,10,0,'prod37.jpg','Figura del personaje NITEHARE de Fortnite, edicion exclusiva de B&C&C Devices',3);
+    prod38 = new ShopItem('FIGURA ACCIÓN FORTNITE: JONESY 18CM',29.95,103,3.5,'prod38.jpg','¡La fiebre de Fortnite llega a McFarlane Toys! Descubre la nueva línea de figuras de tu Battle Royale favorito con más de 18 puntos de articulación. Jonesy, Raven, Dark Bomber… Elige tu personaje favorito y dale vida en el mundo real con esta increíble colección. Sobrevive en la batalla y álzate con la Victoria Magistral. La figura de Jonesy tiene una altura aproximada de 18 cm.',3);
+    //TO DO
+    prod39 = new ShopItem() //Ahri
+    //TO DO
     //DISCOS DUROS 4
-    prod41 = new ShopItem
+    prod41 = new ShopItem ('Seagate BarraCuda 3.5" 1TB SATA3',31.49,3694,4.5,'prod41.jpg','Versátiles. Rápidos. Fiables. La unidad de disco duro más increíble que haya conocido.',4);
+    prod42 = new ShopItem ('WD Blue 2TB 3.5 SATA 3',56.19,458,4.75,'prod42.jpg','Te presentamos en PcComponentes los discos duros Western Digital Blue, una gama de discos duros con unas características de primer nivel, disfruta de altas velocidades de lectura y escritura y capacidades de almacenamiento que te ayudarán en tu dia a dia con tu ordenador.',4);
+    prod43 = new ShopItem ('Zone Evil ZE45733 500GB 2.5" USB 3.0 Negro',24.71,5,3,'prod43.jpg','Caja externa de aluminio con almacenamiento de 500GB. Es una solución ideal para transportar una gran cantidad de información. Con conexión a través del puerto USB 3.0 tiene una velocidad de transferencia de hasta 5.0Gbps. Incluye un LED indicador del estado de conexión y acceso a tu disco duro. Realizada en aluminio para una óptima disipación del calor.',4);
+    prod44 = new ShopItem('Seagate Expansion 5TB 2.5 USB 3.0 Negro',106.62,11,4,'prod44.jpg','Las unidades portátiles Expansion de Seagate son compactas y perfectas para un estilo de vida activo. Añada más espacio de almacenamiento instantáneamente a su equipo, y lleve sus archivos de gran tamaño a cualquier parte con este disco duro portátil de 2.5" y una capacidad de 5TB.',4);
+    prod45 = new ShopItem('Samsung 970 EVO Plus 500GB SSD NVMe M.2',103.30,362,5,'prod45.jpg','Te presentamos el 970 EVO Plus de Samsung, un disco SSD con la última tecnología Samsung. El 970 EVO Plus es más rápido que su antecesor, el 970 EVO, alcanzando velocidades de escritura y lectura de hasta 3500MB/s.',4);
+    prod46 = new ShopItem('Kingston A2000 M.2 500GB PCI Express 3.0 NVMe',59.50,42,4.75,'prod46.jpg','El disco SSD PCIe NVMe A2000 de Kingston es una solución de almacenamiento accesible, con un extraordinario rendimiento. Al alcanzar velocidades de lectura/escritura de hasta 2.200/2.000 MB/s*, el A2000 triplica el rendimiento de los discos SSD SATA por sus más rápidos tiempos de carga, menor consumo y menos calentamiento. El SSD A2000 ha sido diseñado para principiantes, fabricantes de sistemas a medida, personas que construyen sus propios sistemas y quienes buscan mejorar sus PC. Con su delgado diseño M.2 de una cara, el A2000 alcanza su pleno potencial instalado en un Ultrabook o en un PC de pequeño factor de forma (PC SFF).',4);
+    prod47 = new ShopItem('HP S700 500GB SSD SATA 3',57.78,40,5,'prod47.jpg','La serie HP SSD S700 lo ayudará a proteger y transferir sus archivos de datos. El consumo de energía es inferior a 5 mW en el modo de suspensión del dispositivo, lo que ahorra significativamente el consumo de energía del sistema en el estado de espera y logra tanto la velocidad como la resistencia. La serie HP S700 puede ayudar a que la batería de su computadora portátil dure más tiempo. Ninguna pieza móvil dentro del SSD puede mantener su computadora operando a una temperatura más baja y lograr una operación casi silenciosa.',4);
+    prod48 = new ShopItem('Samsung 860 QVO SSD 1TB SATA 3 V-NAND MLC',106.28,61,5,'prod48.jpg','El 860 QVO SSD le brinda gran capacidad de almacenamiento, con un rendimiento y confiabilidad sólidos. Con valor excepcional. Este avance se logró con la última tecnología de flash NAND MLC de 4 bits de Samsung.',4);
+    prod49 = new ShopItem('Hewlett Packard Enterprise 2.5" 1.2 TB 12G SAS',198.01,5,0,'prod49.jpg','Unidad de disco duro basada en semiconductores HP Enterprise, 1200 GB, 12 G, SAS, 10.000 rpm.',4);
     //GAMING 5
     prod51 = new ShopItem
     //ADICIONALES
