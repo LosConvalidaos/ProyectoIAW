@@ -6,10 +6,37 @@
 		<script type="text/javascript" 
 			src="main.js">
 		</script>
+		<style>
+			table {
+				border: solid 3px red;
+			}
+			tr, td {
+				border: solid 1px black;
+			}
+		</style>
 	</head>
 	<body onload="init()">
 		| PLACEHOLDER |
-		<button onclick="pruebas()">Test</button>
-		<img id="test" src="" alt="">
+		<!-- <button onclick="pruebas()">Test</button>
+		<img id="test" src="" alt=""> -->
+		<table>
+			<tr>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+		</table>
+		<button onclick="pruebas2()">Rellenar tabla</button>
+		<button onclick="rand(10)">pruebaloop</button>
 	</body>
 </html>
