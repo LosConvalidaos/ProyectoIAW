@@ -6,7 +6,7 @@
 function pruebas() {
     var test = new ShopItem('NombrePRB',0,0,0,'Placeholder.jpg','Prueba');
     alert(test.img);
-    alert(prod5.typestr)
+    alert(prod5.typestr);
 
     document.getElementById('test').src = test.img;
     /*  Pruebas de acceso a ficheros, no funciona con formato file://
@@ -26,13 +26,12 @@ function pruebas() {
     }
 }*/
 function pruebas2() {
-    //var prods = [prod01,prod12,prod23,prod34,prod45,prod56,prod07,prod18,prod29],
-    var randNums = rand(prods.length);
-    for (let i = 0; i < prods.length; i++) {
+    var randNums = rand(ShopProds.length);
+    for (let i = 0; i < ShopProds.length; i++) {
         //Acceso estatico
-        //document.getElementsByTagName('td')[i].innerHTML = prods[i].name;
+        //document.getElementsByTagName('td')[i].innerHTML = ShopProds[i].name;
         //Acceso aleatorio
-        document.getElementsByTagName('td')[i].innerHTML = prods[randNums[i]].name;
+        document.getElementsByTagName('td')[i].innerHTML = ShopProds[randNums[i]].name;
     }
 }
 //HELPER | Genera numeros aleatorios para el acceso a un array dada su longitud
