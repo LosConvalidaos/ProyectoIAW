@@ -1,0 +1,8 @@
+/*
+    Hoja de estilos pre-produccion
+           (Carlos Labiano)
+*/
+.productos {
+   border-collapse: separate;
+   border-spacing: 100px;
+}
