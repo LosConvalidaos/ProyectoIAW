@@ -25,6 +25,13 @@ function pruebas() {
         document.getElementsByTagName('td')[i].innerHTML = prods[randNums[i]].name;
     }
 }*/
+//Funcion que muestra segmentos de la URL
+function pruebasurl() {
+    /*Accede a la URL a traves de window.location.href y con split crea un array
+        para el acceso a sus elementos*/
+    var url = window.location.href.split('?');
+    alert(url[1]);
+}
 function pruebas2() {
     var randNums = rand(ShopProds.length);
     for (let i = 0; i < ShopProds.length; i++) {
