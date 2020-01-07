@@ -6,3 +6,6 @@
    border-collapse: separate;
    border-spacing: 100px;
 }
+.name {
+    font-weight: bold;
+}
