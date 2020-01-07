@@ -40,7 +40,7 @@ class ShopItem {
     /* Metodos */
     //Devuelve el porcentaje de beneficio correspondiente segun el tipo de producto
     CalcBenefit(t) {
-        var prodtypes = [0.1,0.5,0.3,0.25,0.75];
+        var prodtypes = [0.1,0.5,0.3,0.25,0.05,0.75];
         if (t == null) {
             return 0.2;
         } else {
@@ -49,7 +49,8 @@ class ShopItem {
     }
     //Devuelve el precio con IVA mas el porcentaje de beneficio
     CalcSell() {
-        return this.cost + (this.cost*0.21)+(this.cost*this.CalcBenefit(this.type));
+        let costaux = this.cost + (this.cost*0.21)+(this.cost*this.CalcBenefit(this.type));
+        return Math.round(costaux * 100) / 100;
     }
     //Metodo que muestra de forma mas visual la valoracion
     //WIP
