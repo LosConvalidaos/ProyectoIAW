@@ -21,7 +21,7 @@ function FillProducts() {
         ProdNameBlock.innerHTML = ShopProds[randArrNums[i]].name;
         ProdIMGBlock.src = 'IMGs/' + ShopProds[randArrNums[i]].img;
         ProdRatingBlock.innerHTML = ShopProds[randArrNums[i]].rating;
-        ProdCostBlock.innerHTML = ShopProds[randArrNums[i]].CalcSell();
+        ProdCostBlock.innerHTML = ShopProds[randArrNums[i]].CalcSell() + '€';
     }
 }
 /*
@@ -31,7 +31,7 @@ function FillProducts() {
 function HPGetURLSegment(segment = 0, spltchar = '/') {
     //Crea un array resultado de la division de la URL usando el caracter pasado
     var url = window.location.href.split(spltchar); 
-    alert(url[segment]);
+    //alert(url[segment]);
     return url[segment];
 }
 //HELPER | Genera numeros aleatorios para el acceso a un array dada su longitud
