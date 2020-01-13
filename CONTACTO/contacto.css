@@ -7,7 +7,7 @@ body{
 header{
     background-color:grey;
     width: 100%;
-    height: 7.2%;
+    height: 8.7%;
     position: fixed;
 }
 header img{
@@ -216,20 +216,22 @@ footer a {
 /* PÁGINA CONTACTO */
 h2 {text-align:center;}
 iframe{margin-left:35%; width:30%; height:500px;}
-#contact {border:2px dashed brown; margin-top:3.9%; background:skyblue; height:1050px;}
-    #contact h1 {border:1px solid black; text-align:center;width:50%; margin-left:25%; background:brown; font-size:30px;}
-    #contact h3 {border:1px solid black; text-align:center; background:brown; font-size:30px; width:50%; margin-left:25%;}
+#contact {border:2px dashed brown; margin-top:4.3%;height:1100px;}
+    #contact h1 {border-radius:25px; text-align:center;width:50%; margin-left:25%; background:skyblue; font-size:30px;}
+		#contact h1:hover {background-color:Yellowgreen;}
+    #contact h3 {border-radius: 25px; text-align:center; background:skyblue; font-size:30px; width:50%; margin-left:25%;}
+		#contact h3:hover {background-color:Yellowgreen;}
     #contact p {font-size:30px; text-align:center;}
     #contact ul {list-style:none; font-family:Tahoma; font-weight:bold;}
     #contact legend {text-align:center; font-family:Verdana; font-weight:bold; color:red;}
     #contact img {width:60px; margin-top:-12%; margin-left:-3%;}
-    #contact fieldset {border:2px solid black; width:70%; margin-left:10%;}
+    #contact fieldset {border-radius:25px; width:70%; margin-left:10%;}
     #contact input[type=text] {font-weight:bold;font-size:20px;}
     #contact input[type=date] {font-family:bold; font-size:20px;}
     #contact input[type=file] {font-size:20px;}
-    #mail {font-weight:bold; color:black; border:groove rgb(126, 126, 4); width:70%; margin-left:40%; font-size:30px;}
-    #mail:hover {background:green;}
-    #envio {background-color:orangered; margin-left:40%; font-size:30px;}
-    #reset {background-color:yellow; font-size:30px;}
-    #envio:hover {background:green;}
-    #reset:hover {background:blue;}
+    #mail {font-weight:bold; color:black; width:70%; margin-left:40%; font-size:30px;}
+    #mail:hover {background:skyblue;}
+    #envio {background-color:orangered; margin-left:40%; font-size:30px; border-radius:30px;}
+    #reset {background-color:yellow; font-size:30px; border-radius:30px;}
+    #envio:hover {background:skyblue;}
+    #reset:hover {background:skyblue;}
