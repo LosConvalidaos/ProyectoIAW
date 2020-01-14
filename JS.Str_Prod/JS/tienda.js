@@ -9,20 +9,6 @@ var ShopCat = HPGetURLSegment(1,'?'); //Categoria de los productos a mostrar
 */
 // Funcion que rellena los diferentes bloques de los productos
 function FillProducts() {
-    /*//Array con todas las celdas de productos
-    var ArrTableCell = document.getElementsByClassName('tmenu');
-    var randArrNums = HPArRandomNums(ShopProds.length);
-    for (let i = 0; i < ArrTableCell.length; i++) {
-        let ProdNameBlock = ArrTableCell[i].getElementsByClassName('name')[0],
-            ProdIMGBlock = ArrTableCell[i].getElementsByClassName('img')[0],
-            ProdRatingBlock = ArrTableCell[i].getElementsByClassName('rating')[0],
-            ProdCostBlock = ArrTableCell[i].getElementsByClassName('cost')[0];
-
-        ProdNameBlock.innerHTML = ShopProds[randArrNums[i]].name;
-        ProdIMGBlock.src = 'IMGs/' + ShopProds[randArrNums[i]].img;
-        ProdRatingBlock.innerHTML = ShopProds[randArrNums[i]].rating;
-        ProdCostBlock.innerHTML = ShopProds[randArrNums[i]].CalcSell() + '€';
-    }*/
     var ArrProdIMGBlock = document.getElementsByClassName('img'),
         ArrProdInfoCostBlock = document.getElementsByClassName('infocost');
     var randArrNums = HPArRandomNums(ShopProds.length);
