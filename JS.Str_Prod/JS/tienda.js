@@ -9,7 +9,7 @@ var ShopCat = HPGetURLSegment(1,'?'); //Categoria de los productos a mostrar
 */
 // Funcion que rellena los diferentes bloques de los productos
 function FillProducts() {
-    //Array con todas las celdas de productos
+    /*//Array con todas las celdas de productos
     var ArrTableCell = document.getElementsByClassName('tmenu');
     var randArrNums = HPArRandomNums(ShopProds.length);
     for (let i = 0; i < ArrTableCell.length; i++) {
@@ -20,6 +20,23 @@ function FillProducts() {
 
         ProdNameBlock.innerHTML = ShopProds[randArrNums[i]].name;
         ProdIMGBlock.src = 'IMGs/' + ShopProds[randArrNums[i]].img;
+        ProdRatingBlock.innerHTML = ShopProds[randArrNums[i]].rating;
+        ProdCostBlock.innerHTML = ShopProds[randArrNums[i]].CalcSell() + '€';
+    }*/
+    var ArrProdIMGBlock = document.getElementsByClassName('img'),
+        ArrProdInfoCostBlock = document.getElementsByClassName('infocost');
+    var randArrNums = HPArRandomNums(ShopProds.length);
+    for (let i = 0; i < ArrProdIMGBlock.length; i++) {
+        let ProdNameBlock = ArrProdInfoCostBlock[i].getElementsByClassName('name')[0],
+            ProdInfoBlock = ArrProdInfoCostBlock[i].getElementsByClassName('desc')[0],
+
+            ProdIMGBlock = ArrProdIMGBlock[i],
+            ProdRatingBlock = ArrProdInfoCostBlock[i].getElementsByClassName('rating')[0],
+            ProdCostBlock = ArrProdInfoCostBlock[i].getElementsByClassName('cost')[0];
+
+        ProdNameBlock.innerHTML = ShopProds[randArrNums[i]].name;
+        ProdInfoBlock.innerHTML = ShopProds[randArrNums[i]].descr;
+        ProdIMGBlock.src = '../IMGs/' + ShopProds[randArrNums[i]].img;
         ProdRatingBlock.innerHTML = ShopProds[randArrNums[i]].rating;
         ProdCostBlock.innerHTML = ShopProds[randArrNums[i]].CalcSell() + '€';
     }
