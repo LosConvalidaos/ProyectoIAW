@@ -85,9 +85,6 @@ li a:hover {
     text-decoration: none;
 
 } 
-
-/*ESTILOS SECTION*/
-
 section{
     background-color:white;
     float: right;
@@ -95,7 +92,6 @@ section{
     padding-bottom: 35%;
     height: 900px;
 }
-
 /*ESTILOS FOOTER*/
 
 footer{
@@ -103,6 +99,7 @@ footer{
     float: right;
     width: 90%;
     text-align: center;
+    margin-top: 10%;
 }
 footer a {
     margin-right: 1%;
@@ -116,109 +113,34 @@ footer a {
     width: 2%;
     height: 2%;
 }
+/*ESTILOS SECTION*/
 
-/*SLIDER */
-
-.slider {
-	width: 95%;
-	margin: auto;
-    overflow: hidden;
+section{
     background-color:white;
-    margin-top: 5%;
+    float: right;
+    width: 90%;
+    padding-bottom: 5%;
+    height: 1400px;
 }
-
-.slider ul {
-	display: flex;
-	padding: 0;
-    width: 400%;
-	
-	animation: cambio 20s infinite alternate linear;
-}
-
-.slider li {
-	width: 100%;
-    list-style: none;
-    margin: auto;
-}
-
-.slider img {
-    width: 60%;
-    height: 60%;
-    margin-left: 20%;
-}
-/*Movimiento Slider*/
-@keyframes cambio {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
-	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
-	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
-	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
-}
-/*TABLA PRINCIPAL PRODUCTOS */
-.productos{
-    margin: 0 auto;
-    border-spacing: 120px 0px; 
-    margin-top: 2%;
-    background-color: white;
-    width: 70%;
-}
-.productos td{
-    text-align: center; 
-    border-spacing: 20px; 
-}
-.productos tr td img{
-    width: 220px;
-    height: 200px;
-    border-radius: 20%;
-    padding:0;
-
-}
-.productos tr td img:hover{
-    box-shadow: -5px 5px 5px grey;
-}
-.productos tr td{
-    border-radius: 20%;
-}
-/*CELDAS TABLA PRODUCTOS*/
-.tmenu{
-    box-shadow: -2px 2px grey;
-}
-/*TITULOS TABLA PRODUCTOS*/
-.titulillos{
-    font-size: 20px;
-    font-weight: bold;
-    
-}
-/* TABLA OFERTAS */
-h3 {
-    font-size:5em;
-    font:bold 7.5vw/1.6 'Signika', sans-serif; 
+.listacompra{
+    border: 1px solid black;
+    width: 95%;
+    height: 100%;
+	margin: auto;
     margin-bottom: 1%;
+    border-spacing: 0px 30px;
+}
+.listacompra td{
+    border: 1px solid black;
+}
+section div{
+    margin-top: 1%;
+}
+h1 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 35px;
+    padding: 3%;
     text-align: center;
-    margin-top:1%;
-    font-size: 80px;
-    }
-.ofertas{
-    margin: 0 auto;
-    border-spacing: 120px 0px;
-    width:70%;
-}
-.ofertas tr td{
-    border-radius: 20%;
-    text-align: center;
-}
-.ofertas tr td img{
-    width: 230px;
-    height: 250px;
-    border-radius:20%;
-    padding: 0;
-}
-.ofertas tr td img:hover{
-    box-shadow: -5px 5px 5px grey;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
 }
