@@ -1,0 +1,62 @@
+Apuntes de PHP
+--------------------------------------------------------------------------------
+>Los segmentos de codigo PHP se declaran con '<?php' y se cierran con '?>', todas las
+ordenes de forma similar a JavaScript deben terminarse con ';' para su correcta ejecución
+    Ejemplo:
+        <?php
+            echo "Hello World";
+        ?>
+>Comentarios en PHP
+    // Comentario de una sola linea
+    # Comentario de una sola linea
+    /* */ Comentario multi-linea
+>Variables en PHP (Case-Sensitive!!!)
+    - Las variables se declaran de la siguiente forma, al asignarles valor (Estilo Bash):
+        $NombreVariable = Valor;
+        $x = 5;
+    - Los nombres de variables deben empezar por una LETRA o '_', no pueden empezar con un
+        numero, se permiten los siguientes caracteres [A-z], [0-9] y '_'.
+    - PHP es un lenguaje debilmente tipado similar a JS, pero en PHP7 es posible declarar
+        el tipo de una funcion con el requisito 'strict'
+    - SCOPE / AMBITO de las variables
+        -> Global
+            Variable declarada fuera de una funcion, unicamente puede accederse a ella desde
+            fuera de una función.
+
+            Puede accederse a ellas desde dentro de una funcion con la sentencia 'global' y el
+            nombre de la variable. Ejemplo:
+                <?php
+                    $x = 5;
+                    $y = 10;
+                    function myTest() {
+                        global $x, $y;
+                        $y = $x + $y;
+                    }
+                    myTest();
+                    echo $y; // Devolvera 15
+                ?>
+            
+            Todas las variables globales se almacenan en un array llamado '$GLOBALS', se
+            pueden acceder a estas de las siguiente forma $GLOBALS['NombreVar'], como ejemplo
+            $GLOBALS['y'] tendra el valor 10 en el anterior caso.
+        -> Local
+            Variable declarada dentro de una funcion, accesible solo desde esa funcion.
+        -> Static
+            Variable declara dentro de uan funcion, su valor no es eliminado aun cuando se
+            termina la ejecución de la función y puede utilizarse mas tarde. Para hacer esto
+            se debe declarar la variable con la sentencia 'static'. Ejemplo
+                <?php
+                    function myTest() {
+                        static $x = 0;
+                        echo $x;
+                        $x++;
+                    }
+                    myTest(); // Devolvera 1 (0+1)
+                    myTest(); // Devolvera 2 (1+1)
+                ?>
+>Sentencias de PHP
+    echo $variable | "cadena+HTML"   -> Imprime una cadena de texto una variable
+    echo "Caso ","con ","varios parmaetros" -> Soporta multiples parametros 
+    print $variable | "cadena+HTML"  -> Misma funcion que echo, solo soporta un elemento
+    global $variable  -> Accede a una variable global desde dentro de una función
+    static $variable = valor -> Indica que el valor de la variable se mantenga aunque termine la funcion
