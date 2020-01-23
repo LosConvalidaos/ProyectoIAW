@@ -54,9 +54,228 @@ ordenes de forma similar a JavaScript deben terminarse con ';' para su correcta 
                     myTest(); // Devolvera 1 (0+1)
                     myTest(); // Devolvera 2 (1+1)
                 ?>
+        - Constantes, en PHP las constantes son siempre de ambito global, su valor nunca puede
+            cambiar y se refiere a ellas sin el '$' por delante, existen arrays. Ejemplo:
+            define("NombreVar", "Valor"); | define("NombreAr", ["Val1","Val2"]);
+            echo NombreVar; // Devolvera "Valor"
+>Tipos de datos en PHP
+    string  ->  "Hello World!"
+    integer ->  45
+    float   ->  10.365
+    boolean -> true | false
+    array   -> array("Val1",2,"Val3")
+    null    -> Valor por defecto de una variable
+>Operadores de PHP
+    - Aritmeticos
+        +   -> Suma
+        -   -> Resta
+        *   -> Multplicacion
+        /   -> Divison
+        %   -> Resto
+        **  -> Elevar a potencia
+    - De asignacion
+        =   -> Establecer valor
+        +=  -> Sumar a valor existente
+        -=  -> Restar a valor existente
+        *=  -> Multiplicar por valor existente
+        /=  -> Dividir por valor existente
+        %=  -> Resto de valor existente
+    - Comparacion
+        ==  -> Igual a
+        === -> Igual a en valor y tipo
+        !=  -> No es igual a
+        <>  -> No es igual a
+        !== -> No es igual en valor y tipo
+        >   -> Mayor que
+        <   -> Menor que
+        >=  -> Mayor o igual que
+        <=  -> Menor o igual que
+        <=> -> Devuelve -1 si es menor, 0 si es igual y 1 si es mayor
+    - Aumento / Reducion
+        ++$var  -> Aumenta valor por uno y lo devuelve
+        $var++  -> Devuelve valor y lo aumenta por uno
+        --$var  -> Reduce valor por uno y lo devuelve
+        $var--  -> Devuelve valor y lo reduce por uno
+    - Logicos
+        and / &&
+        or / ||
+        xor -> Devuelve true si cualquiera de los dos es true individualmente
+        !   -> Devuelve true si condicion/valor no es true
+    - Strings
+        .   -> Concatena cadenas ($txt1 . $txt2)
+        .=  -> Concatena cadena a valor de variable y lo almacena
+    - Arrays
+        +   -> Un los dos arrays
+        ==  -> Devuelve true si los arrays tienen los mismos valores
+        === -> Devuelve true si los arrays tienen los mismos valores del mismo tipo y orden
+        != / <> -> Devuelve true si los arrays son diferentes
+        !== -> Devuelve true si los arrays son diferentes en valores, tipo y orden
+>Estructuras condicinales de PHP
+    - IF + ELSE
+        if (condicion) {
+            codigo
+        } else {
+            codigo
+        }
+    - IF + ELSE IF + ELSE
+        if (condicion) {
+            codigo
+        } elseif (condicion) {
+            codigo
+        } else {
+            codigo
+        }
+    - SWITCH
+        switch (var) {
+            case val1:
+                codigo
+                break;
+            case val2:
+                codigo
+                break;
+            case val3:
+                codigo
+                break;
+            default:
+                codigo
+        }
+>Estructuras repetitivas de PHP
+    - WHILE
+        while (condicion) {
+            codigo
+        }
+    - DO WHILE
+        do {
+            codigo
+        } while (condicion);
+    - FOR
+        for ($i = 0; $i <= 10; $i++) {
+            codigo
+        }
+    - FOREACH
+        foreach ($array as $i) {
+            codigo
+        }
+>Funciones en PHP
+    - Declaracion
+        function nombre() {
+            codigo
+        }
+    - Paso de parametros
+        function funpar($param1, $param2) {
+            codigo
+        }
+        funpar("val1","Val2")
+    - Parametros strictos/convertidos
+        function strictpar(int $num, string $str) {
+            codigo
+        }
+        Si no especificamos declare(strict_types=1) al inicio del archivo PHP, unicamente 
+        convertira los parametros al tipo especificado pero permitira su paso.
+    - Parametros por defecto
+        function defpar($param1 = 2) {
+            codigo
+        }
+    - Retorno de valores
+        function retpar() {
+            $var = val;
+            return $var;
+        }
+>Arrays en PHP
+    - Declaracion
+        $ar = array("Val1","Val2");
+        $arasociatvo = array("key1"=>"val1", "key2"=>"val2");
+        $ardimensional = array
+            (
+                array("val1",1)
+                array("val2",2)
+                array("val3",3)
+            )
+    - Acceso
+        $ar[i];
+        $arasociato['key']
+        $ardimensiona[ix1][ix2][ixN]
+>Funciones para STRINGS
+    strlen("cadena")   -> Devuelve la longitud de la cadena
+    str_word_count("cadena")   -> Devuelve el numero de palabras en la cadena
+    strrev("cadena")   -> Invierte el orden de la cadena
+    strpos("cadena", "CadABuscar")  -> Devuelve la posicion en la cadena del primer caracter de la cadena a buscar, en caso contrario FALSE
+    str_replace("CadARemplazar", "CadNueva", "Cadena")  -> Sustituye en una cadena el texto especificado por otro texto
+>Funciones para ARRAYS
+    count($ar)  -> Devuelve longitud del array (Nº elementos)
+    sort($ar)   -> Ordena un array de forma ascendente
+    rsort($ar)  -> Ordena un array de forma descendente
+    asort($ar)   -> Ordena un array asociativo de forma ascendente (Por Valor)
+    ksort($ar)   -> Ordena un array asociativo de forma ascendente (Por Clave)
+    arsort($ar)   -> Ordena un array asociativo de forma descendente (Por Valor)
+    krsort($ar)   -> Ordena un array asociativo de forma descendente (Por Clave)
+
 >Sentencias de PHP
     echo $variable | "cadena+HTML"   -> Imprime una cadena de texto una variable
     echo "Caso ","con ","varios parmaetros" -> Soporta multiples parametros 
     print $variable | "cadena+HTML"  -> Misma funcion que echo, solo soporta un elemento
     global $variable  -> Accede a una variable global desde dentro de una función
     static $variable = valor -> Indica que el valor de la variable se mantenga aunque termine la funcion
+    var_dump($var)  -> Devuelve el tipo de la variable y su valor
+    is_int($var)    -> Devuelve true/false según sea la variable de tipo INT
+    is_float($var)  -> ^ Para variables de tipo FLOAT
+    is_nan($var)    -> Comprueba si el valor no es un numero
+    is_numeric($var)    -> Devuelve true/false según la variable sea numerica
+    (int)$var   -> Convierte la variable a tipo INT
+    define("NombreVar", "Valor")    -> Declara una constante
+    define("NombreAr", ["Val1","Val2"]) -> Declara una constante de tipo array
+
+CONEXION DE PHP CON BASES DE DATOS (MySQLi)
+--------------------------------------------------------------------------------
+MySQLi, sistema de operacion que unicamente funciona con bases de datos MySQL, se vera en su
+version orientada a objetos.
+
+    -- Conexion inicial a la base de datos
+        $conexion = new mysqli('NombreServidor', 'Usuario', 'Contraseña', 'BaseDatos', puerto)
+    -- Comprobacion de la conexion
+        if ($conexion->connect_error) {
+            die("Mensaje: " . $Conexion->connect_error);
+        }
+    -- Cerrar conexion
+        $conexion->close();
+    -- Crear base de datos + Chequeo de errores
+        $sql = "CREATE DATABASE pruebaDB";
+        if ($conexion->query($sql) === TRUE) {
+            echo "Base de datos creada"
+        } else {
+            echo "Error " . $conexion->error
+        }
+    -- Ejecucion general de consultas
+        $sql = "SentenciaSQL";
+        $conexion->query($sql);
+
+        $conexion->query('SentenciaSQL');
+
+        El metodo QUERY() devuelve diferentes valores segun las sentencias SQL que se manden:
+            SELECT, SHOW, DESCRIBE, EXPLAIN -> Recurso en caso de exito, FALSE en caso de error
+            INSERT, UPDATE, DELETE, DROP... -> TRUE si se ejecuta correctamente, FALSE en caso de error
+    -- Ejecucion de varias consultas
+        $sql = "Sentencia1;"
+        $sql .= "Sentencia2;"
+        $sql .= "Sentencia3;"
+
+        $conexion->multi_query($sql)
+    -- Retorno de errores
+        El metodo ERROR devuelve una cadena que describe el ultimo error de MySQL
+
+    -- Acceso y tratamiento de datos (SELECT)
+        $sql = "SELECT campo1, campo2 FROM tabla";
+        $resultado = $conexion->query($sql);
+
+        if ($resultado->num_rows > 0) {
+            while($row = $resultado->fetch_assoc()) {
+                echo "campo1: " . $row["campo1"] . "campo2: " . $row["campo2"];
+            }
+        }
+
+        Con este codigo primero guardamos el resultado en $resultado, comprobamos que se hayan
+        devuelto datos con el metodo NUM_ROWS que indica el numero de registros recibidos.
+        Luego con el metodo fetch_assoc() creamos un array asociativo con los datos de una 
+        fila y lo guardamos en $row, posteriormente accedemos con un bucle que recorre las 
+        filas a los diferentes campos.
+
