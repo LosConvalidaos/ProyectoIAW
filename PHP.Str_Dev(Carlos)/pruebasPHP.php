@@ -36,7 +36,7 @@
 		<ul>
 			<?php
 				for ($i=0; $i < 5; $i++) { 
-					echo "<li> Item numero $i </li>"
+					echo "<li> Item numero $i </li>";
 				}
 			?>
 		</ul>
