@@ -16,7 +16,7 @@
 	<body>
 		<?php
 			# Conexion a la base de datos
-			$link = new mysqli('172.16.32.66', 'root', '4vientos', 'iaw');
+			$link = new mysqli('172.16.32.66', 'iaw', '4vientos', 'iaw');
 
 			if ($link->connect_error) {
 				die("Message: " . $link->connect_error);
