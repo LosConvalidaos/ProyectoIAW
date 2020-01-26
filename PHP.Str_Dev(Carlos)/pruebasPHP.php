@@ -14,6 +14,14 @@
 		</style>
 	</head>
 	<body>
+		<?php
+			# Conexion a la base de datos
+			$link = new mysqli('locahost', 'root', '4vientos', 'iaw');
+
+			if ($link->connect_error) {
+				die("Message: " . $link->connect_error);
+			}
+		?>
 		| PLACEHOLDER |>
 		<table>
 			<tr>
@@ -40,5 +48,18 @@
 				}
 			?>
 		</ul>
+		Tabla de prueba PHP
+		<table>
+			<?php
+				$sql = "SELECT * FROM productos LIMIT 9;";
+				$data = $link->query($sql);
+
+				while ($datarow = $data->fetch_assoc()) {
+					echo "<tr>";
+					echo "<td>" . $datarow["Nombre"] . "</td>";
+					echo "</tr>";
+				}
+			?>
+		</table>
 	</body>
 </html>
