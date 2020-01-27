@@ -1,0 +1,224 @@
+/*Cuerpo*/
+
+body{
+    margin: 0 auto;
+}
+
+/*CABECERA PAGINA*/
+
+header{
+    background-color:grey;
+    width: 100%;
+    height: 7%;
+    position: fixed;
+}
+header img{
+    width: 65px;
+    height: 65px;
+    margin-left:1%;
+}
+header nav{
+    float: right;
+}
+#menuheader{
+    list-style-type: none;
+    /*margin-top: 140px;*/
+    padding: 0;
+    overflow: hidden;
+    background-color:grey;
+}
+#menuheader a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#menuheader li{
+    float: right;
+}
+
+/* MENU IZQUIERDA (ASIDE)*/
+
+aside{
+    background-color: rgb(22, 72, 145 );
+    width: 10%;
+    padding-bottom: 35%;
+    position: fixed;
+    height: 100%;
+    margin-top: 3.5%;
+}
+#menuaside{
+    list-style-type: none;
+    overflow: hidden;
+    background-color:rgb(22, 72, 145 );
+}
+
+#menuaside li{
+    margin-top: 20%;
+    border-bottom:1px solid grey;
+    margin-left: -30%;
+    margin-right: 5%;
+    text-align: center;
+    height: 100%;
+}
+#menuaside li img{
+    width: 20%;
+    height: 20%;
+    float: left;
+    margin-left: 5%;
+    margin-top:2.5%;
+    background-color: rgb(22, 72, 145 );
+}
+aside nav{
+    float: right;
+    height:100%;
+}
+li a:hover {
+    background-color:rgb(5, 46, 106 );
+}
+#menuaside a{
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+} 
+
+/*ESTILOS SECTION*/
+
+section{
+    background-color:white;
+    float: right;
+    width: 90%;
+    padding-bottom: 35%;
+    height: 900px;
+}
+
+/*ESTILOS FOOTER*/
+
+footer{
+    background-color:grey;
+    float: right;
+    width: 90%;
+    text-align: center;
+}
+footer a {
+    margin-right: 1%;
+    font-weight: bold;
+}
+#divpie{
+    margin-top: 1%;
+}
+#divpie img{
+    float: right;
+    width: 2%;
+    height: 2%;
+}
+
+/*SLIDER */
+
+.slider {
+	width: 95%;
+	margin: auto;
+    overflow: hidden;
+    background-color:white;
+    margin-top: 5%;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+    width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+    list-style: none;
+    margin: auto;
+}
+
+.slider img {
+    width: 60%;
+    height: 60%;
+    margin-left: 20%;
+}
+/*Movimiento Slider*/
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+/*TABLA PRINCIPAL PRODUCTOS */
+.productos{
+    margin: 0 auto;
+    border-spacing: 120px 0px; 
+    margin-top: 2%;
+    background-color: white;
+    width: 70%;
+}
+.productos td{
+    text-align: center; 
+    border-spacing: 20px; 
+}
+.productos tr td img{
+    width: 220px;
+    height: 200px;
+    border-radius: 20%;
+    padding:0;
+
+}
+.productos tr td img:hover{
+    box-shadow: -5px 5px 5px grey;
+}
+.productos tr td{
+    border-radius: 20%;
+}
+/*CELDAS TABLA PRODUCTOS*/
+.tmenu{
+    box-shadow: -2px 2px grey;
+}
+/*TITULOS TABLA PRODUCTOS*/
+.titulillos{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+/* TABLA OFERTAS */
+h3 {
+    font-size:5em;
+    font:bold 7.5vw/1.6 'Signika', sans-serif; 
+    margin-bottom: 1%;
+    text-align: center;
+    margin-top:1%;
+    font-size: 80px;
+    }
+.ofertas{
+    margin: 0 auto;
+    border-spacing: 120px 0px;
+    width:70%;
+}
+.ofertas tr td{
+    border-radius: 20%;
+    text-align: center;
+}
+.ofertas tr td img{
+    width: 230px;
+    height: 250px;
+    border-radius:20%;
+    padding: 0;
+}
+.ofertas tr td img:hover{
+    box-shadow: -5px 5px 5px grey;
+}
