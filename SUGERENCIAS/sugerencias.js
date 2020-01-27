@@ -4,8 +4,12 @@ function answers() {
 	var arr_p = document.getElementsByTagName('p') // Se crea otro Array, con los elementos p de la página.
 	var h2s = arr_h2 // Creamos otra variable para tomar el valor del Array de los tag h2.
 	var ps = arr_p // Creamos otra variable para tomar el valor del Array de tag P.
+	
+	if (isNaN(myanswer)){
+		alert('El dato introducido no es numerico');
+	}
 	if (myanswer > 10){ // Nos aseguramos que el usuario ha tecleado un número entre 1 y 10, no puede ser superior a 10.
-		alert('El numero que has introducido es superior a 10... El numero que debes introducir tiene que estar entre 1 y 10');
+		alert('El numero introducido no puede ser superior a 10');
 	}
 	//Hacemos los diferentes If...
 	if (myanswer == 1){ // Hacemos las diferentes comparaciones con el número que hayamos insertado con la posición del Array de P y H2.
