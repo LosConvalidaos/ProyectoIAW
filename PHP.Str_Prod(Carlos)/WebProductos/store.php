@@ -7,7 +7,7 @@
     <body>
         <!-- PHP -->
         <?php
-            $storeCat = htmlspecialchars($_GET["cat"])
+            $storeCat = htmlspecialchars($_GET["cat"]);
             $dbconx = new mysqli('localhost', 'root', '4vientos', 'iaw', 3306);
 
             if ($dbconx->connect_error) {
@@ -33,7 +33,7 @@
                 <h1>Ordenadores De Torre</h1>
             </div>
             <table class="listacompra">
-                <tr>
+                <!-- <tr>
                     <td>
                          <img class="img" src="" alt="IMG">
                     </td>
@@ -52,7 +52,7 @@
                         </div>
                     </td>
                     <td></td>
-                </tr>
+                </tr> -->
                 <?php
                     $sql = "SELECT * FROM productos WHERE Tipo = $storeCat;";
                     $data = $dbconx->query($sql);
@@ -75,6 +75,8 @@
                                 echo '<div class="cost">';
                                     echo $datarow["Precio"];
                                 echo "</div>";
+                            echo "</td>";
+                            echo "<td>";
                             echo "</td>";
                     echo "</tr>";
                     }
