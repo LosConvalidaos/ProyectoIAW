@@ -5,14 +5,43 @@ CJM (Proyecto 2º SMR Cristian) SJI (Proyecto 2º SMR Bibu) SECTION ZEX(Proyecto
 Se ha pensado en los siguientes nombres: CCB, BCC, CBC, Custom, Irauto, Bibu devices, B&C&C Devices.
 
 10-12-2019: Se escoge el nombre final para la empresa.El nombre final será B&C&C Devices. Se piensa el planteamiento del sitio web.
-11-12-2019: Comienza el trabajo, ya pensado el planteamiento. Se empieza a diseñar la página principal que se llama "index.html"
+
+11-12-2019: Comienza el trabajo, ya pensado el planteamiento. Se empieza a diseñar la página principal que se llama "index.html".
+
 12-12-2019: Se sigue con el diseño de la página principal, se encarga bibu de ello. La página de nosotros se encarga cris.
+
 16-12-2019: Continuamos con el diseño de la página principal, y se continua con la página nosotros. Carlos empieza con la página productos.
+
 17-12-2019:Se continua con el desarrollo de JavaScript de la página nosotros. Carlos sigue con el diseño de la página productos. Y Bibu con slider de la página principal.
+
 18-12-2019: Carlos continua desarrollando la página de productos, Bibu continua con la sección de la página principal haciendola más funcional. Cris continua con la página nosotros
 creando un texto descriptivo para cada trabajador.
+
 19-12-2019: Cris termina con el texto de los trabajadores, Bibu sigue haciendo funcional la página principal y Carlos continua con el desarrollo haciendolo más funcional.
-8-1-2020:
-9-1-2020:
+
+8-1-2020: Bibu empezo con las plantillas para las páginas de los diferentes secciones para los productos diferentes que tenemos (PC'S torre, componentes, periféricos, discos duros, gaming y merchandising)
+
+9-1-2020: Bibu sigue con las plantillas, Carlos sigue con el código de la página de productos.
+
+13-1-2020: Bibu termina con las plantillas de los productos. Cris empieza con la página de sugerencias. Actualización Github para los sitios web (web productos y CONTACTO)
+
+14-1-2020: Cris sigue con el desarrollo de la página de sugerencias. Mientras que Bibu y Carlos hablan sobre como van a insertar los productos en las plantillas creadas previamente.
+
+15-1-2020: Bibu se reune nuevamente con Carlos para hablar sobre la inserción de los productos en las plantillas. Carlos sigue haciendo modificaciones en la página de productos. Bibu en el index.
+
+16-1-2020: Cris continúa nuevamente con el desarrollo de la página de sugerencias. Bibu sigue con el desarrollo de implementar opciones nuevas al index.
+
+20-1-2020: Bibu empieza a implementar código JavaScript en la página NOSOTROS para traducir (Textos...) en dicha página.
+
+21-1-2020: Bibu continua con el desarrollo del código JavaScript para el idioma, mientras tanto Cris sigue dandole vueltas como va a planificar el código JavaScript en la página SUGERENCIAS.
+
+24-1-2020: Cris termina el código JavaScript de la página SUGERENCIAS, hizo referencia a un ejercicio que habíamos terminado en clase (Para tener una idea)
+
+26-1-2020: Como no hay nada que hacer un fin de semana, Carlos hace pruebas con PHP para la página PRODUCTOS. Algo innovador.
+
+27-1-2020: Carlos sigue haciendo pruebas con PHP para dicha página. Bibu trata de hacer funcional su código JavaScript que había implementado en su página.
+
+28-1-2020: 
+
 
 
