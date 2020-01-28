@@ -1,0 +1,33 @@
+/*        CSS de Servicios
+    Carlos Labiano Cerón | 2º ASIR
+*/
+section {
+    padding-top: 100px;
+    width: 85%;
+}
+.divsrvi {
+    background-color: red;
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    width: 30%;
+}
+    .srviimg {
+        width: 100%;
+    }
+    .dropdown {
+        width: 10%;
+    }
+article {
+    margin-top: 5%;
+    text-align: center;
+    margin-right: 5%;
+}
+    .artsrvtxt {
+        text-align: justify;
+        /*visibility: hidden;*/
+    }
+    #artsrviimg {
+        width: 50%;
+        /*visibility: hidden;*/
+    }
