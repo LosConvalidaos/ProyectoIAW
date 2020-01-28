@@ -1,0 +1,131 @@
+
+
+body{
+    margin: 0 auto;
+}
+
+/*CABECERA PAGINA*/
+
+header{
+    background-color:grey;
+    width: 100%;
+    height: 7%;
+    position: fixed;
+}
+header img{
+    width: 65px;
+    height: 65px;
+    margin-left:1%;
+}
+header nav{
+    float: right;
+}
+#menuheader{
+    list-style-type: none;
+    /*margin-top: 140px;*/
+    padding: 0;
+    overflow: hidden;
+    background-color:grey;
+}
+#menuheader a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#menuheader li{
+    float: right;
+}
+
+/* MENU IZQUIERDA (ASIDE)*/
+
+aside{
+    background-color: rgb(22, 72, 145 );
+    width:10%;
+    padding-bottom: 35%;
+    position: fixed;
+    height: 100%;
+    margin-top: 3.5%;
+}
+#menuaside{
+    list-style-type: none;
+    overflow: hidden;
+    background-color:rgb(22, 72, 145 );
+}
+
+#menuaside li{
+    margin-top: 20%;
+    border-bottom:1px solid grey;
+    margin-left: -30%;
+    margin-right: 5%;
+    text-align: center;
+    height: 100%;
+}
+#menuaside li img{
+    width: 20%;
+    height: 20%;
+    float: left;
+    margin-left: 5%;
+    margin-top:2.5%;
+    background-color: rgb(22, 72, 145 );
+}
+aside nav{
+    float: right;
+    height:100%;
+}
+li a:hover {
+    background-color:rgb(5, 46, 106 );
+}
+#menuaside a{
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+} 
+
+/*ESTILOS SECTION*/
+
+section{
+    background-color:white;
+    float: right;
+    margin-top:3.5%;
+    width: 89.7%;
+    padding-bottom: 35%;
+    height: 900px;
+}
+
+/*ESTILOS FOOTER*/
+
+footer{
+    background-color:grey;
+    float: right;
+    width: 90%;
+    text-align: center;
+}
+footer a {
+    margin-right: 1%;
+    font-weight: bold;
+}
+#divpie{
+    margin-top: 1%;
+}
+#divpie img{
+    float: right;
+    width: 2%;
+    height: 2%;
+}
+
+/* PÁGINA SUGERENCIAS */
+section {border:3px solid black; margin-left:10%;}
+section h1 {border:2px solid red; border-radius:100px; background:red; text-align:center; width:80%; height:70px; font-size:30px; margin-left:10%;}
+section h2 {font-size:20px; color:blue; margin-left:5%; visibility:hidden;}
+section h3 {border:2px solid blue; border-radius:50px; text-align:center; width:50%; margin-left:20%;}
+section p {margin-left:10%; visibility:hidden;}
+#button_ans {float:right; margin-right:82%; margin-top:3%;}
+#input_answer {margin-top:3%; margin-left:2%;}
+span {color:red; font-weight:bold;}
+hr {width:90%; background:blue; border:1px solid blue; border-radius:400px;}
+section img {float:right; margin-right:18%; width:50px;}

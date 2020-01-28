@@ -1,2 +1,2 @@
 # ProyectoIAW
-B&amp;C&amp; Devices Business Web Page
+B&amp;C&amp;C Devices Business Web Page
