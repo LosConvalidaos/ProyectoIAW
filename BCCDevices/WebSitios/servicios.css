@@ -6,30 +6,48 @@ section {
     width: 85%;
 }
 .divsrvi {
-    background-color: red;
+    /*background-color: red;*/
     display: inline-block;
     text-align: center;
     margin: 15px;
     width: 30%;
+    box-shadow: -2px 2px grey;
+    border-radius: 20%;
 }
+    .divsrvi p {
+        font-size: 25px;
+        font-weight: bold;
+        font-style: italic;
+    }
     .srviimg {
-        width: 100%;
+        width: 90%;
+        border-radius: 10%;
     }
     .dropdown {
         width: 10%;
     }
+        .dropdown:hover {
+            cursor: pointer;
+            background-color: grey;
+            border-radius: 20%;
+        }
 article {
     margin-top: 5%;
     text-align: center;
-    margin-right: 5%;
+    margin-left: 18%;
+    width: 60%;
 }
     .artsrvtxt {
         text-align: justify;
         display: none;
+        font-size: 20px;
     }
     #artsrviimg {
-        width: 50%;
+        width: 80%;
         display: none;
+        border-radius: 20%;
+        border: grey solid 1.5px;
+        box-shadow: -5px 5px 10px lightgray;
     }
 /*footer {
     position: fixed;

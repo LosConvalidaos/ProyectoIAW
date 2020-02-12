@@ -17,7 +17,7 @@ function DisplayDropdown(SrvNum) {
         for (let i = 0; i < ARArtSrvTxt.length; i++) {
             ARArtSrvTxt[i].style.display = 'none';
         }
-        ARArtSrvTxt[SrvNum].style.display = 'inline';
+        ARArtSrvTxt[SrvNum].style.display = 'block';
 
         AlterDropArrow(SrvNum);
     }
