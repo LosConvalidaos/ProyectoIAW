@@ -75,17 +75,24 @@
                                 echo '<div class="name">';
                                     echo $datarow["Nombre"];
                                 echo "</div>";
-                                echo '<div class="desc">';
+                                /*echo '<div class="desc">';
                                     echo $datarow["Descripcion"];
-                                echo "</div>";
+                                echo "</div>";*/
                                 echo '<div class="rating">';
                                     echo 'Valoración: ' . $datarow["Valoracion"] . '/5';
                                 echo "</div>";
+                                /*echo '<div class="cost">';
+                                    echo 'Precio: ' . $datarow["Precio"] . '€';
+                                echo "</div>";*/
+                            echo "</td>";
+                            echo "<td>";
                                 echo '<div class="cost">';
                                     echo 'Precio: ' . $datarow["Precio"] . '€';
                                 echo "</div>";
-                            echo "</td>";
-                            echo "<td>";
+                                echo '<div class="actions">';
+                                    echo "<button>MAS</button>";
+                                    echo "<button>COMPRA</button>";
+                                echo "</div>";
                             echo "</td>";
                     echo "</tr>";
                     }
