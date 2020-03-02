@@ -28,7 +28,7 @@
             </nav>
         </header>
         <section>
-            <div>
+            <div id="StoreTitle">
                 <?php
                 switch ($storeCat) {
                     case '0':
@@ -68,8 +68,8 @@
                     $data = $sqlstm->get_result();
                     while ($datarow = $data->fetch_assoc()) {
                         echo "<tr>";
-                            echo "<td>";
-                                echo '<img class="img" src="IMGs/'. $datarow["Imagen"] .'" alt="IMG">';
+                            echo "<td class=imgcont>";
+                                echo '<img src="IMGs/'. $datarow["Imagen"] .'" alt="IMG">';
                             echo "</td>";
                             echo '<td class="infocost">';
                                 echo '<div class="name">';
@@ -79,7 +79,15 @@
                                     echo $datarow["Descripcion"];
                                 echo "</div>";*/
                                 echo '<div class="rating">';
-                                    echo 'Valoración: ' . $datarow["Valoracion"] . '/5';
+                                    //echo 'Valoración: ' . $datarow["Valoracion"] . '/5';
+                                    echo 'Valoración: <span>';
+                                    for ($i=0; $i < $datarow["Valoracion"]; $i++) { 
+                                        echo '★ ';
+                                    }
+                                    for ($i=5; $i > $datarow["Valoracion"]; $i--) { 
+                                        echo '  ';
+                                    }
+                                    echo '</span>';
                                 echo "</div>";
                                 /*echo '<div class="cost">';
                                     echo 'Precio: ' . $datarow["Precio"] . '€';
@@ -87,11 +95,11 @@
                             echo "</td>";
                             echo "<td>";
                                 echo '<div class="cost">';
-                                    echo 'Precio: ' . $datarow["Precio"] . '€';
+                                    echo $datarow["Precio"] . '€';
                                 echo "</div>";
                                 echo '<div class="actions">';
-                                    echo "<button>MAS</button>";
-                                    echo "<button>COMPRA</button>";
+                                    echo "<button class=morebtt>Ficha completa</button>";
+                                    echo "<button class=buybtt >COMPRAR</button>";
                                 echo "</div>";
                             echo "</td>";
                     echo "</tr>";
