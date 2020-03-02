@@ -16,7 +16,7 @@
         ?>
         <!-- PHP -->
         <header>
-            <a href="../index.html"><img src="../logo header/logo.png"></a>
+            <a href="../index.html"><img src="../logo header/Logo.png"></a>
             <a href="../index.html"><img src="../logo header/logo3.png"></a>
             <nav>
                 <ul id="menuheader">
