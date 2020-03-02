@@ -9,10 +9,10 @@
         <?php
             $storeCat = htmlspecialchars($_GET["cat"]);
             $dbconx = new mysqli('localhost', 'root', '4vientos', 'iaw', 3306);
-
-            if ($dbconx->connect_error) {
+            // Mostrar errores de conexion
+            /*if ($dbconx->connect_error) {
                 die("DB Message: " . $dbconx->connect_error);
-            }
+            }*/
         ?>
         <!-- PHP -->
         <header>
@@ -29,13 +29,43 @@
         </header>
         <section>
             <div>
-                <h1>Ordenadores De Torre</h1>
+                <?php
+                switch ($storeCat) {
+                    case '0':
+                        echo '<h1>Ordenadores De Torre</h1>';
+                        break;
+                    case '1':
+                        echo '<h1>Componentes de PC</h1>';
+                        break;
+                    case '2':
+                        echo '<h1>Perifericos</h1>';
+                        break;
+                    case '3':
+                        echo '<h1>Merchandising y Figuras</h1>';
+                        break;
+                    case '4':
+                        echo '<h1>Discos duros y SSDs</h1>';
+                        break;
+                    case '5':
+                        echo '<h1>Accesorios Gaming</h1>';
+                        break;
+                    default:
+                        echo '<h1>ERROR</h1>';
+                        break;
+                }?>
             </div>
             <table class="listacompra">
                 <?php
-                    $sql = "SELECT * FROM productos WHERE Tipo = $storeCat;";
-                    $data = $dbconx->query($sql);
+                    //DEPRECATED
+                    /*$sql = "SELECT * FROM productos WHERE Tipo = $storeCat;";
+                    $data = $dbconx->query($sql);*/
+                    $sql = "SELECT * FROM productos WHERE Tipo = ?";
 
+                    $sqlstm = $dbconx->prepare($sql);
+                    $sqlstm->bind_param('i', $storeCat);
+                    $sqlstm->execute();
+
+                    $data = $sqlstm->get_result();
                     while ($datarow = $data->fetch_assoc()) {
                         echo "<tr>";
                             echo "<td>";
@@ -49,10 +79,10 @@
                                     echo $datarow["Descripcion"];
                                 echo "</div>";
                                 echo '<div class="rating">';
-                                    echo $datarow["Valoracion"];
+                                    echo 'Valoración: ' . $datarow["Valoracion"] . '/5';
                                 echo "</div>";
                                 echo '<div class="cost">';
-                                    echo $datarow["Precio"];
+                                    echo 'Precio: ' . $datarow["Precio"] . '€';
                                 echo "</div>";
                             echo "</td>";
                             echo "<td>";
@@ -74,7 +104,7 @@
                 </ul>
             </nav>    
         </aside>
-        <footer>
+        <!-- <footer>
             <div id="divpie">
                 <a>Todos los derechos reservados B&C&C &copy; 2019</a>
                 <a href="www.intagram.com"><img src="../redes sociales/instagram.png"></a>
@@ -82,6 +112,6 @@
                 <a href="www.twiter.com"><img src="../redes sociales/twiter.png"></a>
             </div>
             
-        </footer>
+        </footer> -->
     </body>
 </html>
