@@ -19,8 +19,13 @@ function BtnRedir(i, prod = null) {
     }
 }
 function BtnRedir_More(IDProd) {
+    var id = IDProd,
+        url = 'http://localhost/iaw/ProyectoIAW/BCCDevices/WebProductos/prod.php?id=';
+    //Para desarrollo
+    var urlaux = 'http://192.168.5.199/iaw/ProyectoIAW/BCCDevices/WebProductos/prod.php?id='
     
+    window.location.href = urlaux + id;
 }
 function BtnRedir_Buy(IDProd) {
-    
+    var IDProd = id;
 }
