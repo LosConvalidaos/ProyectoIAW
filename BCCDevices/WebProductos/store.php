@@ -3,6 +3,7 @@
     <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="compra.css">
+    <script src="store.js"></script>
     </head>
     <body>
         <!-- PHP -->
@@ -98,8 +99,8 @@
                                     echo $datarow["Precio"] . '€';
                                 echo "</div>";
                                 echo '<div class="actions">';
-                                    echo "<button class=morebtt>Ficha completa</button>";
-                                    echo "<button class=buybtt >COMPRAR</button>";
+                                echo "<button class=morebtt onclick='BtnRedir(0," . $datarow["IDProducto"] . ")'>Ficha completa</button>";
+                                    echo "<button class=buybtt onclick='BtnRedir(1)'>COMPRAR</button>";
                                 echo "</div>";
                             echo "</td>";
                     echo "</tr>";
