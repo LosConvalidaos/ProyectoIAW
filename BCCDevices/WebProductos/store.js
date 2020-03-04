@@ -27,15 +27,17 @@ function BtnRedir_More(IDProd) {
     window.location.href = urlaux + id;
 }
 function BtnRedir_Buy(IDProd) {
-    var id = IDProd,
-        qty = 1;
+    var id = IDProd;
 
-    if (document.getElementById('qty').value == '') {
+    if (document.getElementById('qty') == null) {
         console.error('ERROR, product quantity not found or is NULL/1');
     } else {
-        qty = document.getElementById('qty').value;
+        var qty = document.getElementById('qty').value;
+        if (qty == '') {qty = 1;}
     }
 
     alert('¡ENHORABUENA! Ha comprado '+qty+' unidades');
-    document.getElementById('qty').value = '';
+    if (document.getElementById('qty') != null) {
+        document.getElementById('qty').value = '';
+    }
 }
