@@ -2,9 +2,9 @@
 <html lang="es">
     <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="compra.css">
-    <link rel="stylesheet" href="prod.css">
-    <script src="store.js"></script>
+    <link rel="stylesheet" href="CSS/compra.css">
+    <link rel="stylesheet" href="CSS/prod.css">
+    <script src="JS/store.js"></script>
     </head>
     <body>
         <!-- PHP -->
@@ -18,8 +18,8 @@
         ?>
         <!-- PHP -->
         <header>
-            <a href="../index.html"><img src="../logo header/Logo.png"></a>
-            <a href="../index.html"><img src="../logo header/logo3.png"></a>
+            <a href="index.html"><img src="../IMGs/logo_header/logo.png"></a>
+            <a href="index.html"><img src="../IMGs/logo_header/logo3.png"></a>
             <nav>
                 <ul id="menuheader">
                     <li><a href="../WebSitios/contacto.html">CONTACTO</a></li>
@@ -110,12 +110,12 @@
         <aside>
             <nav>
                 <ul id="menuaside">
-                    <li><img class="iconos" src="../Iconos/portatil.png"><a href="store.php?cat=0">PC´s Torre</a></li>
-                    <li><img src="../Iconos/componentes.png"><a href="store.php?cat=1">Componentes</a></li>
-                    <li><img src="../Iconos/perifericos.png"><a href="store.php?cat=2">Periféricos</a></li>
-                    <li><img src="../Iconos/discosduros.png"><a href="store.php?cat=4">Discos Duros</a></li>
-                    <li><img src="../Iconos/gaming.png"><a href="store.php?cat=5">Gaming</a></li>
-                    <li><img src="../Iconos/merchan.png"><a href="store.php?cat=3">Merchandising</a></li>
+                    <li><img class="iconos" src="../IMGs/iconos/portatil.png"><a href="store.php?cat=0">PC´s Torre</a></li>
+                    <li><img src="../IMGs/iconos/componentes.png"><a href="store.php?cat=1">Componentes</a></li>
+                    <li><img src="../IMGs/iconos/perifericos.png"><a href="store.php?cat=2">Periféricos</a></li>
+                    <li><img src="../IMGs/iconos/discosduros.png"><a href="store.php?cat=4">Discos Duros</a></li>
+                    <li><img src="../IMGs/iconos/gaming.png"><a href="store.php?cat=5">Gaming</a></li>
+                    <li><img src="../IMGs/iconos/merchan.png"><a href="store.php?cat=3">Merchandising</a></li>
                 </ul>
             </nav>    
         </aside>

@@ -1,6 +1,6 @@
 function imagen(i) {
 	var imagenes = new Array("bibu", "cris", "carlos");
-	var pics = new Array("pic1.png", "pic2.png", "pic3.png");
+	var pics = new Array("IMGs/pic1.png", "IMGs/pic2.png", "IMGs/pic3.png");
 	var titles = document.getElementById('title')
 	titles.innerHTML = imagenes[i];
 	var persons = document.getElementById('person')
