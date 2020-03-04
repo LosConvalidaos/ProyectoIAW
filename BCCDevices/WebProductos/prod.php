@@ -3,6 +3,7 @@
     <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="compra.css">
+    <link rel="stylesheet" href="prod.css">
     </head>
     <body>
         <!-- PHP -->
@@ -28,7 +29,7 @@
             </nav>
         </header>
         <section>
-            <div id="StoreTitle">
+            <!-- <div id="StoreTitle">
                 <?php
                 /*switch ($storeCat) {
                     case '0':
@@ -53,8 +54,7 @@
                         echo '<h1>ERROR</h1>';
                         break;
                 }*/?>
-            </div>
-            <table class="listacompra">
+            </div> -->
                 <?php
                     $sql = "SELECT * FROM productos WHERE IDProducto = ?";
 
@@ -64,46 +64,45 @@
 
                     $data = $sqlstm->get_result();
                     $proddata = $data->fetch_assoc();
-                    //
-                    echo "<tr>";
-                            echo "<td class=imgcont>";
-                                echo '<img src="IMGs/'. $proddata["Imagen"] .'" alt="IMG">';
-                            echo "</td>";
-                            echo '<td class="infocost">';
-                                echo '<div class="name">';
-                                    echo $proddata["Nombre"];
-                                echo "</div>";
-                                /*echo '<div class="desc">';
-                                    echo $proddata["Descripcion"];
-                                echo "</div>";*/
-                                echo '<div class="rating">';
-                                    //echo 'Valoración: ' . $proddata["Valoracion"] . '/5';
-                                    echo 'Valoración: <span>';
-                                    for ($i=0; $i < $proddata["Valoracion"]; $i++) { 
-                                        echo '★ ';
-                                    }
-                                    for ($i=5; $i > $proddata["Valoracion"]; $i--) { 
-                                        echo '  ';
-                                    }
-                                    echo '</span>';
-                                echo "</div>";
-                                /*echo '<div class="cost">';
-                                    echo 'Precio: ' . $proddata["Precio"] . '€';
-                                echo "</div>";*/
-                            echo "</td>";
-                            echo "<td>";
-                                echo '<div class="cost">';
-                                    echo $proddata["Precio"] . '€';
-                                echo "</div>";
-                                echo '<div class="actions">';
-                                    echo "<button class=morebtt>Ficha completa</button>";
-                                    echo "<button class=buybtt >COMPRAR</button>";
-                                echo "</div>";
-                            echo "</td>";
-                    echo "</tr>";
-                    //
                 ?>
-            </table>
+                <?php if ($sqlstm) { ?>
+                    <table class="listacompra">
+                        <tr>
+                            <td class="imgcont">
+                                <img src="IMGs/<?php echo $proddata["Imagen"]; ?>" alt="IMG">
+                                <div class="rating">Valoración: <span> 
+                                    <?php
+                                        for ($i=0; $i < $proddata["Valoracion"]; $i++) { 
+                                            echo '★ ';
+                                        }
+                                        for ($i=5; $i > $proddata["Valoracion"]; $i--) { 
+                                            echo '  ';
+                                        }
+                                    ?>
+                                </span></div>
+                            </td>
+                            <td class="costaction">
+                                <div class="cost">
+                                    <?php echo $proddata["Precio"] ?> €
+                                    <p>Precio con IVA incluido</p>
+                                </div>
+                                <div class="actions">
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="info">
+                                <div class="name">
+                                    <?php echo $proddata["Nombre"]; ?>
+                                </div>
+                                <div class="desc">
+                                    <?php echo $proddata["Descripcion"]; ?>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                <?php } ?>
         </section>
         <aside>
             <nav>
