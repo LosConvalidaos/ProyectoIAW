@@ -1,0 +1,26 @@
+.listacompra {
+    margin-top: 5%;
+}
+
+.imgcont {
+    width: 60%;
+}
+    .imgcont img {
+        height: auto;
+    }
+    .rating {
+        text-align: center;
+        font-size: 28px;
+        padding-bottom: 1.5%;
+    }
+.costaction {
+    background-color: transparent;
+}
+    .costaction div {
+        background-color: rgba(128, 128, 128, 0.151);
+        border-radius: 35%;
+        padding: 20% 0px;
+    }
+    .costaction p {
+        font-size: 24px;
+    }
