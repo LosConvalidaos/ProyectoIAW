@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="compra.css">
     <link rel="stylesheet" href="prod.css">
+    <script src="store.js"></script>
     </head>
     <body>
         <!-- PHP -->
@@ -87,7 +88,9 @@
                                     <p>Precio con IVA incluido</p>
                                 </div>
                                 <div class="actions">
-                                    
+                                    Cantidad: 
+                                    <input type="number" id="qty">
+                                    <button class="buybtt" onclick="BtnRedir(1,<?php echo $id; ?>)">COMPRAR</button>
                                 </div>
                             </td>
                         </tr>
