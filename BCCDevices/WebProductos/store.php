@@ -53,9 +53,11 @@
                     default:
                         echo '<h1>ERROR</h1>';
                         break;
-                }?>
+                }
+                ?>
             </div>
             <table class="listacompra">
+                <tbody>
                 <?php
                     //DEPRECATED
                     /*$sql = "SELECT * FROM productos WHERE Tipo = $storeCat;";
@@ -72,7 +74,7 @@
                             echo "<td class=imgcont>";
                                 echo '<img src="IMGs/'. $datarow["Imagen"] .'" alt="IMG">';
                             echo "</td>";
-                            echo '<td class="infocost">';
+                            echo '<td class="info">';
                                 echo '<div class="name">';
                                     echo $datarow["Nombre"];
                                 echo "</div>";
@@ -94,9 +96,10 @@
                                     echo 'Precio: ' . $datarow["Precio"] . '€';
                                 echo "</div>";*/
                             echo "</td>";
-                            echo "<td>";
+                            echo '<td class="costaction">';
                                 echo '<div class="cost">';
                                     echo $datarow["Precio"] . '€';
+                                    
                                 echo "</div>";
                                 echo '<div class="actions">';
                                 echo "<button class=morebtt onclick='BtnRedir(0," . $datarow["IDProducto"] . ")'>Ficha completa</button>";
@@ -104,8 +107,12 @@
                                 echo "</div>";
                             echo "</td>";
                     echo "</tr>";
+                    /* TO DO
+                        > Implementar separador entre productos
+                    */
                     }
                 ?>
+                </tbody>
             </table>
         </section>
         <aside>
