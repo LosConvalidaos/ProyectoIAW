@@ -31,6 +31,7 @@ function BtnRedir_Buy(IDProd) {
 
     if (document.getElementById('qty') == null) {
         console.error('ERROR, product quantity not found or is NULL/1');
+        var qty = 1;
     } else {
         var qty = document.getElementById('qty').value;
         if (qty == '') {qty = 1;}
