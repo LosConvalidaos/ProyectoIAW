@@ -10,7 +10,7 @@
     }
     .rating {
         text-align: center;
-        font-size: 28px;
+        font-size: 22px;
         padding-bottom: 1.5%;
     }
 .costaction {
@@ -24,3 +24,12 @@
     .costaction p {
         font-size: 24px;
     }
+    .buybtt {
+        margin-left: 10%;
+    }
+    #qty {
+        width: 10%;
+    }
+.info {
+    text-align: left;
+}
