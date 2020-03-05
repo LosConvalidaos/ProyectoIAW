@@ -6,9 +6,9 @@
     <script src="JS/store.js"></script>
     </head>
     <body>
-        <!-- PHP -->
+        <!-- PHP | DATABASE CONNECTION + GET CATEGORY -->
         <?php
-            $storeCat = htmlspecialchars($_GET["cat"]);
+            $storeCat = htmlspecialchars($_GET["cat"]); #Obtener categoria seleccionada
             $dbconx = new mysqli('localhost', 'root', '4vientos', 'iaw', 3306);
             // Mostrar errores de conexion
             /*if ($dbconx->connect_error) {
@@ -30,48 +30,47 @@
         </header>
         <section>
             <div id="StoreTitle">
-                <?php
-                switch ($storeCat) {
-                    case '0':
-                        echo '<h1>Ordenadores De Torre</h1>';
-                        break;
-                    case '1':
-                        echo '<h1>Componentes de PC</h1>';
-                        break;
-                    case '2':
-                        echo '<h1>Perifericos</h1>';
-                        break;
-                    case '3':
-                        echo '<h1>Merchandising y Figuras</h1>';
-                        break;
-                    case '4':
-                        echo '<h1>Discos duros y SSDs</h1>';
-                        break;
-                    case '5':
-                        echo '<h1>Accesorios Gaming</h1>';
-                        break;
-                    default:
-                        echo '<h1>ERROR</h1>';
-                        break;
-                }
+                <?php #Mostrar titulo tienda según categoria
+                    switch ($storeCat) {
+                        case '0':
+                            echo '<h1>Ordenadores De Torre</h1>';
+                            break;
+                        case '1':
+                            echo '<h1>Componentes de PC</h1>';
+                            break;
+                        case '2':
+                            echo '<h1>Perifericos</h1>';
+                            break;
+                        case '3':
+                            echo '<h1>Merchandising y Figuras</h1>';
+                            break;
+                        case '4':
+                            echo '<h1>Discos duros y SSDs</h1>';
+                            break;
+                        case '5':
+                            echo '<h1>Accesorios Gaming</h1>';
+                            break;
+                        default:
+                            echo '<h1>ERROR</h1>';
+                            break;
+                    }
                 ?>
             </div>
             <table class="listacompra">
                 <tbody>
                 <?php
-                    //DEPRECATED
-                    /*$sql = "SELECT * FROM productos WHERE Tipo = $storeCat;";
-                    $data = $dbconx->query($sql);*/
+                    // Establecer consulta SQL parametrica
                     $sql = "SELECT * FROM productos WHERE Tipo = ?";
-
-                    $sqlstm = $dbconx->prepare($sql);
-                    $sqlstm->bind_param('i', $storeCat);
-                    $sqlstm->execute();
-
+                    // Preparacion y ejecucion
+                    $sqlstm = $dbconx->prepare($sql); #Preparar consulta SQL
+                    $sqlstm->bind_param('i', $storeCat); #Asignación de parametros
+                    $sqlstm->execute(); #Ejecuion de la sentencia
+                    // Almacenar objeto un 'result' devuelto por la consulta
                     $data = $sqlstm->get_result();
                 ?>
-                <?php if ($sqlstm) { ?>
+                <?php if ($sqlstm) { ?> <!-- Comprobar ejecucion de la consulta -->
                     <?php while ($datarow = $data->fetch_assoc()) { ?>
+                    <!-- Por cada registro creación de su entrada en la tabla -->
                         <tr>
                             <td class=imgcont>
                                 <img src="IMGs/<?php echo $datarow["Imagen"]; ?>" alt="IMG">
@@ -80,13 +79,10 @@
                                 <div class="name">
                                     <?php echo $datarow["Nombre"]; ?>
                                 </div>
-                                <!-- /*echo '<div class="desc">';
-                                    echo $datarow["Descripcion"];
-                                echo "</div>";*/ -->
                                 <div class="rating">
-                                    <!-- //echo 'Valoración: ' . $datarow["Valoracion"] . '/5'; -->
                                     Valoración: <span>
                                     <?php
+                                        // Representa graficamente la valoracion
                                         for ($i=0; $i < $datarow["Valoracion"]; $i++) { 
                                             echo '★ ';
                                         }
@@ -96,9 +92,6 @@
                                     ?>
                                     </span>
                                 </div>
-                                <!-- /*echo '<div class="cost">';
-                                    echo 'Precio: ' . $datarow["Precio"] . '€';
-                                echo "</div>";*/ -->
                             </td>
                             <td class="costaction">
                                 <div class="cost">
@@ -110,9 +103,6 @@
                                 </div>
                             </td>
                     </tr>
-                    <!-- /* TO DO
-                        > Implementar separador entre productos
-                    */ -->
                     <?php } ?>
                 <?php } ?>
                 </tbody>
@@ -121,23 +111,22 @@
         <aside>
             <nav>
                 <ul id="menuaside">
-                    <li><img class="iconos" src="../IMGs/iconos/portatil.png"><a href="store.php?cat=0">PC´s Torre</a></li>
+                    <li><img src="../IMGs/iconos/portatil.png"><a href="store.php?cat=0">PC´s Torre</a></li>
                     <li><img src="../IMGs/iconos/componentes.png"><a href="store.php?cat=1">Componentes</a></li>
                     <li><img src="../IMGs/iconos/perifericos.png"><a href="store.php?cat=2">Periféricos</a></li>
                     <li><img src="../IMGs/iconos/discosduros.png"><a href="store.php?cat=4">Discos Duros</a></li>
                     <li><img src="../IMGs/iconos/gaming.png"><a href="store.php?cat=5">Gaming</a></li>
                     <li><img src="../IMGs/iconos/merchan.png"><a href="store.php?cat=3">Merchandising</a></li>
                 </ul>
-            </nav>    
+            </nav>
         </aside>
-        <!-- <footer>
+        <footer>
             <div id="divpie">
                 <a>Todos los derechos reservados B&C&C &copy; 2019</a>
-                <a href="www.intagram.com"><img src="../redes sociales/instagram.png"></a>
-                <a href="www.facebook.com"><img src="../redes sociales/facebook.png"></a>
-                <a href="www.twiter.com"><img src="../redes sociales/twiter.png"></a>
+                <a href="www.intagram.com"><img src="../IMGs/redes_sociales/instagram.png"></a>
+                <a href="www.facebook.com"><img src="../IMGs/redes_sociales/facebook.png"></a>
+                <a href="www.twiter.com"><img src="../IMGs/redes_sociales/twiter.png"></a>
             </div>
-            
-        </footer> -->
+        </footer>
     </body>
 </html>
