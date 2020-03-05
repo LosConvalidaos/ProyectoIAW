@@ -4,6 +4,7 @@
     <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="CSS/compra.css">
+    <link rel="shortcut icon" href="../IMGs/logo_header/logo.ico" type="image/x-icon">
     <script src="JS/store.js"></script>
     </head>
     <body>
