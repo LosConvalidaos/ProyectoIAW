@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Carlos Labiano Cerón | 2º ASIR -->
 <html lang="es">
     <head>
     <meta charset="utf-8">
@@ -65,7 +66,7 @@
                     $sqlstm = $dbconx->prepare($sql); #Preparar consulta SQL
                     $sqlstm->bind_param('i', $storeCat); #Asignación de parametros
                     $sqlstm->execute(); #Ejecuion de la sentencia
-                    // Almacenar objeto un 'result' devuelto por la consulta
+                    // Almacenar objeto 'result' devuelto por la consulta
                     $data = $sqlstm->get_result();
                 ?>
                 <?php if ($sqlstm) { ?> <!-- Comprobar ejecucion de la consulta -->

@@ -1,5 +1,4 @@
-/*Cuerpo*/
-
+/* ESTILOS CUERPO */
 body{
     margin: 0 auto;
 }
@@ -142,9 +141,6 @@ h1 {
     text-rendering: optimizeLegibility;
 }
 /* ESTILOS TABLA PRODUCTOS */
-/*.separator {
-    background-color: red;
-}*/
 #StoreTitle {
     padding-top: 2.5%;
     font-style: italic;
@@ -153,6 +149,7 @@ h1 {
 .listacompra {
     text-align: center;
 }
+/* ESTILOS PRODUCTOS */
 .imgcont {
     width: 20%;
     box-shadow: -2px 2px grey;

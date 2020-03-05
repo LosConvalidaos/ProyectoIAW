@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Carlos Labiano Cerón | 2º ASIR -->
 <html lang="es">
     <head>
     <meta charset="utf-8">
@@ -7,9 +8,9 @@
     <script src="JS/store.js"></script>
     </head>
     <body>
-        <!-- PHP -->
+        <!-- PHP | DATABASE CONNECTION + GET CATEGORY -->
         <?php
-            $id = htmlspecialchars($_GET["id"]);
+            $id = htmlspecialchars($_GET["id"]); #Obtener ID del producto seleccionado
             $dbconx = new mysqli('localhost', 'root', '4vientos', 'iaw', 3306);
             // Mostrar errores de conexion
             /*if ($dbconx->connect_error) {
@@ -30,82 +31,59 @@
             </nav>
         </header>
         <section>
-            <!-- <div id="StoreTitle">
-                <?php
-                /*switch ($storeCat) {
-                    case '0':
-                        echo '<h1>Ordenadores De Torre</h1>';
-                        break;
-                    case '1':
-                        echo '<h1>Componentes de PC</h1>';
-                        break;
-                    case '2':
-                        echo '<h1>Perifericos</h1>';
-                        break;
-                    case '3':
-                        echo '<h1>Merchandising y Figuras</h1>';
-                        break;
-                    case '4':
-                        echo '<h1>Discos duros y SSDs</h1>';
-                        break;
-                    case '5':
-                        echo '<h1>Accesorios Gaming</h1>';
-                        break;
-                    default:
-                        echo '<h1>ERROR</h1>';
-                        break;
-                }*/?>
-            </div> -->
-                <?php
-                    $sql = "SELECT * FROM productos WHERE IDProducto = ?";
-
-                    $sqlstm = $dbconx->prepare($sql);
-                    $sqlstm->bind_param('i', $id);
-                    $sqlstm->execute();
-
-                    $data = $sqlstm->get_result();
-                    $proddata = $data->fetch_assoc();
-                ?>
-                <?php if ($sqlstm) { ?>
-                    <table class="listacompra">
-                        <tr>
-                            <td class="imgcont">
-                                <img src="IMGs/<?php echo $proddata["Imagen"]; ?>" alt="IMG">
-                                <div class="rating">Valoración: <span> 
-                                    <?php
-                                        for ($i=0; $i < $proddata["Valoracion"]; $i++) { 
-                                            echo '★ ';
-                                        }
-                                        for ($i=5; $i > $proddata["Valoracion"]; $i--) { 
-                                            echo '  ';
-                                        }
-                                    ?>
-                                </span></div>
-                            </td>
-                            <td class="costaction">
-                                <div class="cost">
-                                    <?php echo $proddata["Precio"] ?> €
-                                    <p>Precio con IVA incluido</p>
-                                </div>
-                                <div class="actions">
-                                    Cantidad: 
-                                    <input type="number" id="qty">
-                                    <button class="buybtt" onclick="BtnRedir(1,<?php echo $id; ?>)">COMPRAR</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="info">
-                                <div class="name">
-                                    <?php echo $proddata["Nombre"]; ?>
-                                </div>
-                                <div class="desc">
-                                    <?php echo $proddata["Descripcion"]; ?>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                <?php } ?>
+            <?php
+                // Establecer consulta SQL parametrica
+                $sql = "SELECT * FROM productos WHERE IDProducto = ?";
+                // Preparacion y ejecucion
+                $sqlstm = $dbconx->prepare($sql); #Preparar consulta SQL
+                $sqlstm->bind_param('i', $id); #Asignación de parametros
+                $sqlstm->execute(); #Ejecuion de la sentencia
+                // Almacenar objeto 'result' devuelto por la consulta y tratarlo
+                $data = $sqlstm->get_result();
+                $proddata = $data->fetch_assoc(); #Convertir resultado en un array asociativo
+            ?>
+            <?php if ($sqlstm) { ?> <!-- Comprobar ejecucion de la consulta -->
+                <!-- Crear tabla con datos del producto -->
+                <table class="listacompra">
+                    <tr>
+                        <td class="imgcont">
+                            <img src="IMGs/<?php echo $proddata["Imagen"]; ?>" alt="IMG">
+                            <div class="rating">Valoración: <span> 
+                                <?php
+                                    // Representa graficamente la valoracion
+                                    for ($i=0; $i < $proddata["Valoracion"]; $i++) { 
+                                        echo '★ ';
+                                    }
+                                    for ($i=5; $i > $proddata["Valoracion"]; $i--) { 
+                                        echo '  ';
+                                    }
+                                ?>
+                            </span></div>
+                        </td>
+                        <td class="costaction">
+                            <div class="cost">
+                                <?php echo $proddata["Precio"] ?> €
+                                <p>Precio con IVA incluido</p>
+                            </div>
+                            <div class="actions">
+                                Cantidad: 
+                                <input type="number" id="qty">
+                                <button class="buybtt" onclick="BtnRedir(1,<?php echo $id; ?>)">COMPRAR</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="info">
+                            <div class="name">
+                                <?php echo $proddata["Nombre"]; ?>
+                            </div>
+                            <div class="desc">
+                                <?php echo $proddata["Descripcion"]; ?>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            <?php } ?>
         </section>
         <aside>
             <nav>
@@ -119,14 +97,13 @@
                 </ul>
             </nav>    
         </aside>
-        <!-- <footer>
+        <footer>
             <div id="divpie">
                 <a>Todos los derechos reservados B&C&C &copy; 2019</a>
-                <a href="www.intagram.com"><img src="../redes sociales/instagram.png"></a>
-                <a href="www.facebook.com"><img src="../redes sociales/facebook.png"></a>
-                <a href="www.twiter.com"><img src="../redes sociales/twiter.png"></a>
+                <a href="www.intagram.com"><img src="../IMGs/redes_sociales/instagram.png"></a>
+                <a href="www.facebook.com"><img src="../IMGs/redes_sociales/facebook.png"></a>
+                <a href="www.twiter.com"><img src="../IMGs/redes_sociales/twiter.png"></a>
             </div>
-            
-        </footer> -->
+        </footer>
     </body>
 </html>

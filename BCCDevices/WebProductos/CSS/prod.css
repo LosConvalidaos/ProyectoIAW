@@ -1,10 +1,12 @@
+/* ESTILOS FOOTER */
 footer {
     margin-top: auto;
 }
+/* ESTILOS TABLA PRODUCTOS */
 .listacompra {
     margin-top: 5%;
 }
-
+/* ESTILO PRODUCTOS */
 .imgcont {
     width: 60%;
 }
