@@ -18,8 +18,8 @@
         ?>
         <!-- PHP -->
         <header>
-            <a href="index.html"><img src="../IMGs/logo_header/logo.png"></a>
-            <a href="index.html"><img src="../IMGs/logo_header/logo3.png"></a>
+            <a href="../index.html"><img src="../IMGs/logo_header/logo.png"></a>
+            <a href="../index.html"><img src="../IMGs/logo_header/logo3.png"></a>
             <nav>
                 <ul id="menuheader">
                     <li><a href="../WebSitios/contacto.html">CONTACTO</a></li>
