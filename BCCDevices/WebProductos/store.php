@@ -17,8 +17,8 @@
         ?>
         <!-- PHP -->
         <header>
-            <a href="index.html"><img src="../IMGs/logo_header/logo.png"></a>
-            <a href="index.html"><img src="../IMGs/logo_header/logo3.png"></a>
+            <a href="../index.html"><img src="../IMGs/logo_header/logo.png"></a>
+            <a href="../index.html"><img src="../IMGs/logo_header/logo3.png"></a>
             <nav>
                 <ul id="menuheader">
                     <li><a href="../WebSitios/contacto.html">CONTACTO</a></li>
@@ -69,49 +69,52 @@
                     $sqlstm->execute();
 
                     $data = $sqlstm->get_result();
-                    while ($datarow = $data->fetch_assoc()) {
-                        echo "<tr>";
-                            echo "<td class=imgcont>";
-                                echo '<img src="IMGs/'. $datarow["Imagen"] .'" alt="IMG">';
-                            echo "</td>";
-                            echo '<td class="info">';
-                                echo '<div class="name">';
-                                    echo $datarow["Nombre"];
-                                echo "</div>";
-                                /*echo '<div class="desc">';
-                                    echo $datarow["Descripcion"];
-                                echo "</div>";*/
-                                echo '<div class="rating">';
-                                    //echo 'Valoración: ' . $datarow["Valoracion"] . '/5';
-                                    echo 'Valoración: <span>';
-                                    for ($i=0; $i < $datarow["Valoracion"]; $i++) { 
-                                        echo '★ ';
-                                    }
-                                    for ($i=5; $i > $datarow["Valoracion"]; $i--) { 
-                                        echo '  ';
-                                    }
-                                    echo '</span>';
-                                echo "</div>";
-                                /*echo '<div class="cost">';
-                                    echo 'Precio: ' . $datarow["Precio"] . '€';
-                                echo "</div>";*/
-                            echo "</td>";
-                            echo '<td class="costaction">';
-                                echo '<div class="cost">';
-                                    echo $datarow["Precio"] . '€';
-                                    
-                                echo "</div>";
-                                echo '<div class="actions">';
-                                echo "<button class=morebtt onclick='BtnRedir(0," . $datarow["IDProducto"] . ")'>Ficha completa</button>";
-                                    echo "<button class=buybtt onclick='BtnRedir(1," . $datarow["IDProducto"] . ")'>COMPRAR</button>";
-                                echo "</div>";
-                            echo "</td>";
-                    echo "</tr>";
-                    /* TO DO
-                        > Implementar separador entre productos
-                    */
-                    }
                 ?>
+                <?php if ($sqlstm) { ?>
+                    <?php while ($datarow = $data->fetch_assoc()) { ?>
+                        <tr>
+                            <td class=imgcont>
+                                <img src="IMGs/<?php echo $datarow["Imagen"]; ?>" alt="IMG">
+                            </td>
+                            <td class="info">
+                                <div class="name">
+                                    <?php echo $datarow["Nombre"]; ?>
+                                </div>
+                                <!-- /*echo '<div class="desc">';
+                                    echo $datarow["Descripcion"];
+                                echo "</div>";*/ -->
+                                <div class="rating">
+                                    <!-- //echo 'Valoración: ' . $datarow["Valoracion"] . '/5'; -->
+                                    Valoración: <span>
+                                    <?php
+                                        for ($i=0; $i < $datarow["Valoracion"]; $i++) { 
+                                            echo '★ ';
+                                        }
+                                        for ($i=5; $i > $datarow["Valoracion"]; $i--) { 
+                                            echo '  ';
+                                        }
+                                    ?>
+                                    </span>
+                                </div>
+                                <!-- /*echo '<div class="cost">';
+                                    echo 'Precio: ' . $datarow["Precio"] . '€';
+                                echo "</div>";*/ -->
+                            </td>
+                            <td class="costaction">
+                                <div class="cost">
+                                    <?php echo $datarow["Precio"] . '€'; ?>
+                                </div>
+                                <div class="actions">
+                                    <button class=morebtt onclick='BtnRedir(0,<?php echo $datarow["IDProducto"]; ?>)'>Ficha completa</button>
+                                    <button class=buybtt onclick='BtnRedir(1,<?php echo $datarow["IDProducto"]; ?>)'>COMPRAR</button>
+                                </div>
+                            </td>
+                    </tr>
+                    <!-- /* TO DO
+                        > Implementar separador entre productos
+                    */ -->
+                    <?php } ?>
+                <?php } ?>
                 </tbody>
             </table>
         </section>
