@@ -5,6 +5,7 @@ section {
     padding-top: 100px;
     width: 85%;
 }
+/* ESTILOS DEL MENU SERIVICIOS */
 .divsrvi {
     /*background-color: red;*/
     display: inline-block;
@@ -31,6 +32,7 @@ section {
             background-color: grey;
             border-radius: 20%;
         }
+/* ESTILOS DE LOS ARTICULOS */
 article {
     margin-top: 5%;
     text-align: center;
@@ -49,12 +51,3 @@ article {
         border: grey solid 1.5px;
         box-shadow: -5px 5px 10px lightgray;
     }
-/*footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center
-}*/
